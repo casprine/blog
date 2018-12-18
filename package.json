@@ -1,0 +1,29 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "next-manifest": "^1.6.0",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "next build",
+    "prod": "NODE_ENV=production node server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
