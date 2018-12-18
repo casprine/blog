@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
+import { Layout, Header } from "../components/common/index";
 import "../static/sass/index.scss";
 
 export default () => (
@@ -7,16 +8,9 @@ export default () => (
     <Head>
       <title>Casprine Assempah</title>
     </Head>
-    <div className="flex container">
-      <p>
-        Happy Hacking with Backpack{" "}
-        <span role="img" aria-label="fire">
-          🧳
-        </span>
-        <span role="img" aria-label="fire">
-          🔥
-        </span>
-      </p>
-    </div>
+
+    <Layout>
+      <Header />
+    </Layout>
   </Fragment>
 );

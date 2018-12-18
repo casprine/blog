@@ -20,7 +20,10 @@ export default class MyDocument extends Document {
                 sans-serif;
             }
 
-            // font path
+            * {
+              outline: 1px solid red;
+            }
+
             @font-face {
               font-family: "circular";
               src: url("./static/fonts/ciruclar.ttf");
@@ -30,7 +33,7 @@ export default class MyDocument extends Document {
             }
 
             .circular {
-              font-family: "circular", var(--defaultFont);
+              // font-family: "circular", var(--defaultFont);
             }
 
             body {

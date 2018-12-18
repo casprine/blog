@@ -1,10 +1,31 @@
-// default container styling
+// header styling
+.header {
+  outline: 1px solid red;
+  height: 320px;
+  background-image: -webkit-radial-gradient(
+    circle,
+    #d7d7d7,
+    #d7d7d7 1px,
+    #fff 1px,
+    #fff
+  );
+  background-image: -moz-radial-gradient(
+    circle,
+    #d7d7d7,
+    #d7d7d7 1px,
+    #fff 1px,
+    #fff
+  );
+  background-image: radial-gradient(
+    circle,
+    #d7d7d7,
+    #d7d7d7 1px,
+    #fff 1px,
+    #fff
+  );
+  background-size: 28px 28px;
+}
 
-.container {
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  background-color: #3e3838;
-  color: white;
+* {
+  outline: 1px solid red;
 }
