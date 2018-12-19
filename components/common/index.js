@@ -36,14 +36,16 @@ const Logo = () => (
 
 const Navbar = () => (
   <Fragment>
-    <nav className="ca-header padding-top center">
+    <nav className="navbar padding-top padding-bottom center">
       <Logo />
       <ul className="ca-routes">
-        <Link href="https://casprine-dev.netlify.com/work" className="link">
+        <Link href="https://casprine-dev.netlify.com/work">
           <a className="link">Work</a>
         </Link>
-        <Link href="https://casprine-dev.netlify.com/design" className="link">
-          <a className="link">Design</a>
+        <Link href="https://casprine-dev.netlify.com/design">
+          <a className="link" href="https://casprine-dev.netlify.com/design">
+            Design
+          </a>
         </Link>
         <Link to="/writings" className="link">
           <a className="active-link">Writings</a>
