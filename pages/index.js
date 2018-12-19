@@ -38,7 +38,6 @@ export default () => (
         <Article />
         <Article />
         <Article />
-        <Article />
       </div>
     </Layout>
   </Fragment>

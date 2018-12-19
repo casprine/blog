@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import "../../static/sass/index.scss";
 import "../../static/sass/global.scss";
+import { trimArticle } from "../../utils/helpers";
 
 const layoutStyles = {
   outline: {
@@ -66,7 +67,7 @@ const Navbar = () => (
           </a>
         </Link>
         <Link to="/writings" className="link">
-          <a className="link">Saved Writings</a>
+          <a className="link">Bookmarked</a>
         </Link>
       </ul>
     </nav>

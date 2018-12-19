@@ -2,6 +2,10 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import { Colors } from "./index";
 import "../../static/sass/global.scss";
+import { trimArticle } from "../../utils/helpers";
+
+const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
 
 const Article = () => {
   return (
@@ -11,10 +15,7 @@ const Article = () => {
           <div className="heading">
             Handling Observables with NgIf and the Async Pipe
           </div>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            harum saepe, sapiente nisi quisquam quia in commodi iusto nequex
-          </p>
+          <p>{trimArticle(art, 100)}</p>
 
           <div className="footer  flex">
             <img
