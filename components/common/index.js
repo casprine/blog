@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
+import Head from "next/head";
+
 import "../../static/sass/index.scss";
 import "../../static/sass/global.scss";
-import { trimArticle } from "../../utils/helpers";
 
 const layoutStyles = {
   outline: {
@@ -18,6 +19,9 @@ const layoutStyles = {
 const Layout = props => {
   return (
     <Fragment>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div style={layoutStyles.outline}>
         <div style={layoutStyles.wrapper}>{props.children}</div>
 

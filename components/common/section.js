@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Head from "next/head";
 import { Colors } from "./index";
 import "../../static/sass/global.scss";
 

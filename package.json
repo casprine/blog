@@ -15,6 +15,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "next build",
+    "export": "next export",
     "prod": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {

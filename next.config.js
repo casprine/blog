@@ -19,3 +19,11 @@ module.exports = withSass();
 //     }
 //   }
 // });
+
+// module.exports = {
+//   exportPathMap: function() {
+//     return {
+//       "/": { page: "/" }
+//     };
+//   }
+// };

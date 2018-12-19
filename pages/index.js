@@ -13,22 +13,9 @@ export default () => (
 
     <Layout>
       <Header />
-      <Tags />
       <SectionHeader />
-
+      <Tags />
       <div className="articles grid-3">
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
         <Article />
         <Article />
         <Article />
