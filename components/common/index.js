@@ -5,7 +5,7 @@ import "../../static/sass/global.scss";
 
 const layoutStyles = {
   outline: {
-    backgroundColor: "#f6f9fa"
+    backgroundColor: "white"
   },
   wrapper: {
     width: "85vw",
@@ -19,6 +19,24 @@ const Layout = props => {
     <Fragment>
       <div style={layoutStyles.outline}>
         <div style={layoutStyles.wrapper}>{props.children}</div>
+
+        <style jsx>{`
+          @font-face {
+            font-family: "circular";
+            src: url("../../static/fonts/ciruclar.ttf");
+            font-weight: normal;
+            font-style: normal;
+            font-display: auto;
+          }
+
+          @font-face {
+            font-family: "aleg";
+            src: url("../../static/fonts/alegreya.ttf");
+            font-weight: normal;
+            font-style: normal;
+            font-display: auto;
+          }
+        `}</style>
       </div>
     </Fragment>
   );
@@ -48,7 +66,7 @@ const Navbar = () => (
           </a>
         </Link>
         <Link to="/writings" className="link">
-          <a className="active-link">Writings</a>
+          <a className="link">Saved Writings</a>
         </Link>
       </ul>
     </nav>
@@ -62,4 +80,12 @@ const Header = () => (
   </Fragment>
 );
 
-export { Layout, Header };
+const Colors = {
+  primary: "#071e3d",
+  secondary: "#eaaz81b",
+  grey: "hsl(0, 0%, 27%)",
+  defaultFont: ` -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
+};
+
+export { Layout, Header, Colors };

@@ -14,30 +14,14 @@ export default class MyDocument extends Document {
 
         <style jsx global>
           {`
-            :root {
-              --defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-                sans-serif;
-            }
-            @font-face {
-              font-family: "circular";
-              src: url("./static/fonts/ciruclar.ttf");
-              font-weight: normal;
-              font-style: normal;
-              font-display: auto;
-            }
-
-            .circular {
-              // font-family: "circular", var(--defaultFont);
-            }
-
             body {
               margin: 0;
               padding: 0;
-              font-family: "circular", var(--defaultFont);
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               color: #0e0220;
+              // background-color: #f6f9fa;
+              background-color: #ebf0f6;
               scroll-behavior: smooth;
             }
 
