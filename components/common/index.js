@@ -30,8 +30,8 @@ const Layout = props => {
           }
 
           @font-face {
-            font-family: "aleg";
-            src: url("../../static/fonts/alegreya.ttf");
+            font-family: "geo";
+            src: url("../../static/fonts/geo.ttf");
             font-weight: normal;
             font-style: normal;
             font-display: auto;

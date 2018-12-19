@@ -17,106 +17,28 @@ export default () => (
       <SectionHeader />
 
       <div className="articles grid-3">
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
-      <Article></Article>
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
+        <Article />
       </div>
     </Layout>
   </Fragment>
