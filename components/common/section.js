@@ -81,7 +81,7 @@ const SectionHeader = () => {
         .section-header,
         img,
         div {
-          1flex-direction: column;
+          flex-direction: column;
           align-items: center;
           padding: 10px 0;
         }

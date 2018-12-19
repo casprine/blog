@@ -5,7 +5,7 @@ import "../../static/sass/global.scss";
 
 const layoutStyles = {
   outline: {
-    backgroundColor: "white"
+    backgroundColor: "#ebf0f6"
   },
   wrapper: {
     width: "85vw",
