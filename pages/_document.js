@@ -19,11 +19,6 @@ export default class MyDocument extends Document {
                 Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
                 sans-serif;
             }
-
-            * {
-              outline: 1px solid red;
-            }
-
             @font-face {
               font-family: "circular";
               src: url("./static/fonts/ciruclar.ttf");

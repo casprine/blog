@@ -1,31 +1,85 @@
+@import "./variables";
+
 // header styling
 .header {
-  outline: 1px solid red;
-  height: 320px;
-  background-image: -webkit-radial-gradient(
-    circle,
-    #d7d7d7,
-    #d7d7d7 1px,
-    #fff 1px,
-    #fff
-  );
-  background-image: -moz-radial-gradient(
-    circle,
-    #d7d7d7,
-    #d7d7d7 1px,
-    #fff 1px,
-    #fff
-  );
-  background-image: radial-gradient(
-    circle,
-    #d7d7d7,
-    #d7d7d7 1px,
-    #fff 1px,
-    #fff
-  );
-  background-size: 28px 28px;
+  height: 350px;
+  // outline: 1px solid red;
+  // background-image: -webkit-radial-gradient(
+  //   circle,
+  //   #d7d7d7,
+  //   #d7d7d7 1px,
+  //   #fff 1px,
+  //   #fff
+  // );
+  // background-image: -moz-radial-gradient(
+  //   circle,
+  //   #d7d7d7,
+  //   #d7d7d7 1px,
+  //   #fff 1px,
+  //   #fff
+  // );
+  // background-image: radial-gradient(
+  //   circle,
+  //   #f6f9fa,
+  //   #d7d7d7 1px,
+  //   #fff 1px,
+  //   #fff
+  // );
+  // background-size: 28px 28px;
+}
+// Header styling
+
+.ca-header {
+  // outline: 1px solid red;
+
+  .ca-routes {
+    display: flex;
+    width: 250px;
+    // outline: 1px solid red;
+
+    justify-content: space-between;
+    align-content: center;
+    margin-left: auto;
+  }
 }
 
-* {
-  outline: 1px solid red;
+// Logo styling
+.ca-logo {
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    border: 2px solid $secondary;
+    color: $secondary;
+  }
+
+  div {
+    font-size: 20px;
+  }
+}
+
+.link {
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+  // outline: 1px solid red;
+
+  &:hover {
+    padding-bottom: 4px;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.active-link {
+  border-bottom: 2px solid $primary;
+
+  &:hover {
+    border-bottom: 2px solid transparent;
+  }
 }

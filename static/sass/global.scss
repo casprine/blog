@@ -1,0 +1,40 @@
+@import "./variables";
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+.padding {
+  padding: 40px 90px;
+  width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+.padding-side {
+  width: 85vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+.padding-top {
+  padding-top: 40px;
+}
+.padding-bottom {
+  padding-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
