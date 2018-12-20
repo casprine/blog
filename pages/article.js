@@ -8,7 +8,6 @@ import { ArticleView } from "../components/common/post";
 import Head from "next/head";
 
 export default withRouter(props => {
-  console.log(props);
   return (
     <Fragment>
       <Head>

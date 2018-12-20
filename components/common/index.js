@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import "../../static/sass/index.scss";
@@ -13,6 +13,32 @@ const layoutStyles = {
     marginRight: "auto",
     marginLeft: "auto"
   }
+};
+const ThemeChanger = () => {
+  const [theme, changeTheme] = useState(true);
+
+  function switchTheme() {
+    return theme ? changeTheme(false) : changeTheme(true);
+  }
+  return (
+    <Fragment>
+      <div className="theme-changer pointer" onClick={() => switchTheme()}>
+        <span>{theme ? "Light" : "Dark"} </span>
+        <span role="img" aria-label="moon">
+          {theme ? "🌕" : "🌑"}
+        </span>
+      </div>
+
+      <style jsx>
+        {`
+          div {
+            outline: 1px solid red;
+            margin-right: auto;
+          }
+        `}
+      </style>
+    </Fragment>
+  );
 };
 
 const Layout = props => {
@@ -60,6 +86,7 @@ const Navbar = () => (
   <Fragment>
     <nav className="navbar padding-top padding-bottom center">
       <Logo />
+      <ThemeChanger />
       <ul className="ca-routes">
         <Link href="https://casprine-dev.netlify.com/work">
           <a className="link">Work</a>

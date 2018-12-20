@@ -70,15 +70,14 @@ const Article = props => {
 const ArticleView = props => {
   const [saved, setStatus] = useState(false);
 
-  function saveArticle() {
+  function saveArticle(props) {
     return saved ? setStatus(false) : setStatus(true);
   }
-  console.log(saved);
   return (
     <Fragment>
       <section>
-        <h1 className="geo"> Testing Actions in NGRX Store </h1>
-        <div className="meta  outline flex">
+        <h1 className="geo heading"> Testing Actions in NGRX Store </h1>
+        <div className="meta flex">
           <Tag />
           <span className="bullet">•</span>
           <span className="date">Dec 19, 2018</span>
@@ -92,7 +91,7 @@ const ArticleView = props => {
               <path d="M128 80v380c0 3.3 3.8 5.2 6.4 3.2l116.8-92c2.9-2.1 6.8-2.1 9.6 0l116.8 92c2.6 2 6.4.1 6.4-3.2V80c0-17.7-14.3-32-32-32H160c-17.7 0-32 14.3-32 32z" />
             </svg>
             <span className="pointer">
-              {saved ? "Remove from bookmark" : "Save Article"}
+              {saved ? " Remove from bookmark" : " Save Article"}
             </span>
           </span>
         </div>
@@ -101,7 +100,6 @@ const ArticleView = props => {
       <style jsx>{`
         section {
           height: 100vh;
-          // outline: 1px solid red;
           margin-top: 50px;
         }
 
@@ -121,9 +119,13 @@ const ArticleView = props => {
           cursor: pointer;
         }
 
+        span {
+          margin: auto 0;
+        }
+
         meta {
-          outline: 1px solid red;
           align-item: center;
+          // margin-top: 15px;
         }
 
         * {
@@ -136,11 +138,11 @@ const ArticleView = props => {
 
         h1 {
           font-size: 40px;
-          outline: 1px solid red;
           color: ${Colors.primary};
           letter-spacing: 0.2px;
           line-height: 52px;
           font-weight: 500;
+          margin: 0;
         }
       `}</style>
     </Fragment>
