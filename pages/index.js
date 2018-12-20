@@ -5,31 +5,29 @@ import { Tags, SectionHeader } from "../components/common/section";
 import { Article } from "../components/common/post";
 import { Pagination } from "../components/common/pagination";
 import Footer from "../components/common/footer";
+import data from "../data.json";
+
 import "../static/sass/global.scss";
 
-export default () => (
-  <Fragment>
-    <Head>
-      <title>Casprine Assempah</title>
-    </Head>
+export default () => {
+  return (
+    <Fragment>
+      <Head>
+        <title>Casprine Assempah</title>
+      </Head>
 
-    <Layout>
-      <Header />
-      <SectionHeader />
-      <Tags />
-      <div className="articles grid-3">
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-      </div>
-      <Pagination />
-      <Footer />
-    </Layout>
-  </Fragment>
-);
+      <Layout>
+        <Header />
+        <SectionHeader />
+        <Tags />
+        <div className="articles grid-3">
+          {data.map(post => {
+            return <Article {...post} />;
+          })}
+        </div>
+        <Pagination />
+        <Footer />
+      </Layout>
+    </Fragment>
+  );
+};

@@ -7,7 +7,7 @@ const Footer = () => (
   <Fragment>
     <nav className="navbar  padding-bottom center">
       <Logo />
-      <div className="ca-routes">
+      <div className="ca-routes" id="fotter-links">
         <Link href="https://dribbble.com/casprine" className="link-inverse">
           <span className="link-inverse">Dribbble</span>
         </Link>
