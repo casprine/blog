@@ -11,7 +11,7 @@ const Article = props => {
   console.log(props);
   return (
     <Fragment>
-      <Link href={`/article/?${props.title}`}>
+      <Link href={`/article/?${props.title}`} as={`/${props.title}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading">{props.title}</div>
