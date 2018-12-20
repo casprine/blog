@@ -9,12 +9,11 @@ const Pagination = () => {
           <span className="end">40</span>
         </div>
 
-        <div className="right link">Next</div>
+        <div className="right link-inverse">Next</div>
       </nav>
 
       <style jsx>{`
         nav {
-          outline: 1px solid red;
           margin-bottom: 50px;
           margin-top: 20px;
         }

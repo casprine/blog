@@ -93,4 +93,4 @@ const Colors = {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
 };
 
-export { Layout, Header, Colors };
+export { Layout, Header, Colors, Logo };
