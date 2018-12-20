@@ -83,10 +83,19 @@ a {
 
 .tag {
   @media (max-width: 450px) {
-    outline: 1px solid red;
     width: 100%;
     display: block !important;
   }
+}
+
+.tags {
+  .tag {
+    margin: 10px 20px;
+  }
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 // grid system

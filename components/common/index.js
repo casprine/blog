@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Head from "next/head";
-
 import "../../static/sass/index.scss";
 import "../../static/sass/global.scss";
 
@@ -87,8 +86,9 @@ const Header = () => (
 
 const Colors = {
   primary: "#071e3d",
-  secondary: "#eaaz81b",
+  secondary: "#eaa81b",
   grey: "hsl(0, 0%, 27%)",
+  green: "#36622b",
   defaultFont: ` -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
 };

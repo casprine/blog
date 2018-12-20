@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Colors } from "./index";
 import "../../static/sass/global.scss";
 
-const Tag = () => {
+const Tag = props => {
   return (
     <Fragment>
       <div className="flex tag">
@@ -15,14 +15,9 @@ const Tag = () => {
       </div>
       <style jsx>
         {`
-        .flex {
-          justify-content: center; 
-        }
         .tag {
           display: flex;
           cursor: pointer;
-          margin: 10px 20px;
-
         }
         img {
           width: 20px;
@@ -38,7 +33,6 @@ const Tag = () => {
     </Fragment>
   );
 };
-
 const Tags = () => {
   return (
     <Fragment>

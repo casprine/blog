@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Colors } from "./index";
+import { Tag } from "./section";
 import Link from "next/link";
 import "../../static/sass/global.scss";
 import { trimArticle } from "../../utils/helpers";
@@ -8,13 +9,12 @@ const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
 harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
 
 const Article = props => {
-  console.log(props);
   return (
     <Fragment>
       <Link href={`/article/?${props.title}`} as={`/${props.title}`}>
         <article className="article">
           <div className="wrapper">
-            <div className="heading">{props.title}</div>
+            <div className="heading"> Testing Actions in NGRX Store </div>
             <p>{trimArticle(art, 100)}</p>
             <div className="footer  flex">
               <img
@@ -67,4 +67,83 @@ const Article = props => {
   );
 };
 
-export { Article };
+const ArticleView = props => {
+  const [saved, setStatus] = useState(false);
+
+  function saveArticle() {
+    return saved ? setStatus(false) : setStatus(true);
+  }
+  console.log(saved);
+  return (
+    <Fragment>
+      <section>
+        <h1 className="geo"> Testing Actions in NGRX Store </h1>
+        <div className="meta  outline flex">
+          <Tag />
+          <span className="bullet">•</span>
+          <span className="date">Dec 19, 2018</span>
+          <span className="bullet">•</span>
+          <span className="flex" onClick={() => saveArticle()}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              className={saved ? "save" : "icon"}
+            >
+              <path d="M128 80v380c0 3.3 3.8 5.2 6.4 3.2l116.8-92c2.9-2.1 6.8-2.1 9.6 0l116.8 92c2.6 2 6.4.1 6.4-3.2V80c0-17.7-14.3-32-32-32H160c-17.7 0-32 14.3-32 32z" />
+            </svg>
+            <span className="pointer">
+              {saved ? "Remove from bookmark" : "Save Article"}
+            </span>
+          </span>
+        </div>
+      </section>
+
+      <style jsx>{`
+        section {
+          height: 100vh;
+          // outline: 1px solid red;
+          margin-top: 50px;
+        }
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          fill: ${Colors.grey};
+          margin: auto 0;
+          cursor: pointer;
+        }
+
+        .save {
+          width: 20px;
+          height: 20px;
+          fill: ${Colors.green};
+          margin: auto 0;
+          cursor: pointer;
+        }
+
+        meta {
+          outline: 1px solid red;
+          align-item: center;
+        }
+
+        * {
+          color: ${Colors.grey};
+        }
+
+        .bullet {
+          margin: 0 10px;
+        }
+
+        h1 {
+          font-size: 40px;
+          outline: 1px solid red;
+          color: ${Colors.primary};
+          letter-spacing: 0.2px;
+          line-height: 52px;
+          font-weight: 500;
+        }
+      `}</style>
+    </Fragment>
+  );
+};
+export { Article, ArticleView };

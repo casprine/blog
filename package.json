@@ -8,8 +8,8 @@
     "next": "^7.0.2",
     "next-manifest": "^1.6.0",
     "node-sass": "^4.10.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
+    "react": "16.7.0-alpha.0",
+    "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.1.1"
   },
   "scripts": {
