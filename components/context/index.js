@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { localStore } from "../../utils/index";
 
 const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    theme: "light",
+    theme: localStore.getByKey("theme"),
     color: {
       light: {
         backgroundColor: "#ebf0f6"
@@ -16,10 +17,19 @@ class ContextProvider extends Component {
     }
   };
 
+  save(props) {
+    this.setState(
+      {
+        theme: props
+      },
+      () => {
+        localStore.setItem("theme", props);
+      }
+    );
+  }
+
   switchTheme = () => {
-    this.state.theme === "light"
-      ? this.setState({ theme: "dark" })
-      : this.setState({ theme: "light" });
+    this.state.theme === "light" ? this.save("dark") : this.save("light");
   };
 
   render() {

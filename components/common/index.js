@@ -22,7 +22,6 @@ const ThemeChanger = () => {
     <Fragment>
       <ContextConsumer>
         {({ theme, switchTheme }) => {
-          console.log(theme);
           return (
             <div className="theme-changer pointer" onClick={switchTheme}>
               <span role="img" aria-label="moon">

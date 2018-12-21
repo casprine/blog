@@ -2,6 +2,9 @@ const store = {
   getByKey(key) {
     try {
       const data = localStorage.getItem(key);
+      if (data === null) {
+        return undefined;
+      }
       return JSON.parse(data);
     } catch (e) {
       return Error(e);
@@ -40,6 +43,11 @@ const store = {
       while (i--) {
         data[keys[i]] = JSON.parse(localStorage.getItem(keys[i]));
       }
+
+      if (keys === null) {
+        return null;
+      }
+
       return data;
     } catch (e) {
       return Error(e);
