@@ -20,14 +20,14 @@ class ContextProvider extends Component {
   };
 
   componentDidMount() {
-    const theme = localStorage.getItem("theme");
-    if (theme) {
-      this.setState({ dark: theme });
-    }
+    // const theme = localStorage.getItem("theme");
+    // if (theme) {
+    //   this.setState({ dark: theme });
+    // }
   }
 
   componentDidUpdate() {
-    localStorage.setItem("theme", this.state.dark);
+    // localStorage.setItem("theme", this.state.dark);
   }
 
   render() {

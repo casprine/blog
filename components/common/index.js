@@ -35,7 +35,7 @@ const ThemeChanger = () => {
       <style jsx>
         {`
           div {
-            margin-right: auto;
+            margin-left: auto;
           }
 
           span {
@@ -102,7 +102,6 @@ const Navbar = () => (
   <Fragment>
     <nav className="navbar padding-top padding-bottom flex-wrap center">
       <Logo />
-      <ThemeChanger />
       <ul className="ca-routes">
         <Link href="https://casprine-dev.netlify.com/work">
           <a className="link">Work</a>
@@ -116,6 +115,7 @@ const Navbar = () => (
           <a className="link">Bookmarked</a>
         </Link>
       </ul>
+      <ThemeChanger />
     </nav>
   </Fragment>
 );
