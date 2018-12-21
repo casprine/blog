@@ -3,7 +3,7 @@ import "../static/sass/global.scss";
 import { withRouter } from "next/router";
 import { Layout, Header } from "../components/common/index";
 import { Tags, SectionHeader } from "../components/common/section";
-import { ArticleView } from "../components/common/post";
+import ArticleView from "../components/common/article";
 
 import Head from "next/head";
 
