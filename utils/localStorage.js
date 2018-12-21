@@ -3,7 +3,7 @@ const store = {
     try {
       const data = localStorage.getItem(key);
       if (data === null) {
-        return undefined;
+        return null;
       }
       return JSON.parse(data);
     } catch (e) {

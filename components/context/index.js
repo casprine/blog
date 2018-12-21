@@ -1,48 +1,49 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { localStore } from "../../utils/index";
 
 const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    theme: localStore.getByKey("theme"),
-    color: {
-      light: {
-        backgroundColor: "#ebf0f6"
-      },
-      dark: {
-        backgroundColor: "black",
-        color: "white"
-      }
-    }
+    dark: false
   };
 
-  save(props) {
-    this.setState(
-      {
-        theme: props
-      },
-      () => {
-        localStore.setItem("theme", props);
-      }
-    );
+  change(props) {
+    this.setState({
+      dark: props
+    });
   }
 
   switchTheme = () => {
-    this.state.theme === "light" ? this.save("dark") : this.save("light");
+    !this.state.dark
+      ? this.setState({ dark: true })
+      : this.setState({ dark: false });
   };
 
+  componentDidMount() {
+    const theme = localStorage.getItem("theme");
+    if (theme) {
+      console.log(theme);
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem("theme", this.state.dark);
+  }
+
   render() {
+    console.log("rendering", this.state.dark);
     return (
-      <ContextContext.Provider
-        value={{
-          theme: this.state.theme,
-          switchTheme: this.switchTheme,
-          color: this.state.color
-        }}
-      >
-        {this.props.children}
-      </ContextContext.Provider>
+      <Fragment>
+        <ContextContext.Provider
+          value={{
+            theme: this.state.dark,
+            switchTheme: this.switchTheme
+          }}
+        >
+          {this.props.children}
+        </ContextContext.Provider>
+      </Fragment>
     );
   }
 }

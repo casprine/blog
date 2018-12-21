@@ -326,3 +326,9 @@ h6 {
     border-bottom: 2px solid white;
   }
 }
+
+.light {
+  * {
+    outline: 1px solid red !important;
+  }
+}

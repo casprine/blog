@@ -25,7 +25,7 @@ const ThemeChanger = () => {
           return (
             <div className="theme-changer pointer" onClick={switchTheme}>
               <span role="img" aria-label="moon">
-                {theme === "light" ? "🌕" : "🌑"}
+                {theme ? "🌑" : "🌕"}
               </span>
             </div>
           );
@@ -59,14 +59,11 @@ const Layout = ({ children }) => {
       </Head>
 
       <ContextConsumer>
-        {({ theme, color }) => {
+        {({ theme }) => {
+          console.log(theme);
           return (
-            <div
-              // style={theme === "light" ? color.light :}
-              className={theme === "light" ? color.light : "dark"}
-            >
+            <div className={theme ? "dark" : "light"}>
               <div style={layoutStyles.wrapper}>{children}</div>
-
               <style jsx>{`
                 @font-face {
                   font-family: "circular";
