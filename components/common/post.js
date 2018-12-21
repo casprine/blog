@@ -29,7 +29,6 @@ const Article = props => {
 
       <style jsx>{`
         .article {
-          background: white;
           cursor: pointer;
           box-shadow: 0 1px 3px 0 rgba(38, 41, 58, 0.06);
           // border-top: 5px solid ${Colors.primary};

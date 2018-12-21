@@ -5,11 +5,15 @@ const Pagination = () => {
     <Fragment>
       <nav className="flex">
         <div className="left">
-          Page <span className="start"> 1</span> of
-          <span className="end">40</span>
+          <span>
+            Page <span className="start"> 1</span> of
+          </span>
+          <span className="end"> 40</span>
         </div>
 
-        <div className="right link-inverse">Next</div>
+        <div className="right link-inverse">
+          <span>Next</span>
+        </div>
       </nav>
 
       <style jsx>{`

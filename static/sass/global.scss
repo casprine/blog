@@ -100,6 +100,10 @@ a {
   }
 }
 
+.article {
+  background-color: white;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -282,4 +286,43 @@ h6 {
 .grid-6 > *:nth-child(6n + 4),
 .grid-6 > *:nth-child(6n + 5) {
   margin-right: 40px;
+}
+
+// dark theme styling
+.dark {
+  * {
+    // outline: 1px solid red !important;
+  }
+
+  background: black !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  ul,
+  li,
+  span {
+    color: white !important;
+  }
+
+  .article {
+    outline: 1px solid white;
+    background-color: black;
+
+    * {
+      color: white !important;
+    }
+  }
+
+  .link:hover {
+    border-bottom: 2px solid white;
+  }
+
+  .link-inverse {
+    border-bottom: 2px solid white;
+  }
 }

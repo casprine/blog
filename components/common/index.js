@@ -62,7 +62,10 @@ const Layout = ({ children }) => {
       <ContextConsumer>
         {({ theme, color }) => {
           return (
-            <div style={theme === "light" ? color.light : color.dark}>
+            <div
+              // style={theme === "light" ? color.light :}
+              className={theme === "light" ? color.light : "dark"}
+            >
               <div style={layoutStyles.wrapper}>{children}</div>
 
               <style jsx>{`
