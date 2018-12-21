@@ -6,7 +6,6 @@ import { Article } from "../components/common/post";
 import { Pagination } from "../components/common/pagination";
 import Footer from "../components/common/footer";
 import data from "../data.json";
-
 import "../static/sass/global.scss";
 
 export default () => {
@@ -15,7 +14,6 @@ export default () => {
       <Head>
         <title>Casprine Assempah</title>
       </Head>
-
       <Layout>
         <Header />
         <SectionHeader />

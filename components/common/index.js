@@ -1,39 +1,50 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import "../../static/sass/index.scss";
 import "../../static/sass/global.scss";
+import { ContextConsumer } from "../context/index";
 
 const layoutStyles = {
   outline: {
     backgroundColor: "#ebf0f6"
   },
+
   wrapper: {
     width: "85vw",
     marginRight: "auto",
     marginLeft: "auto"
   }
 };
-const ThemeChanger = () => {
-  const [theme, changeTheme] = useState(true);
 
-  function switchTheme() {
-    return theme ? changeTheme(false) : changeTheme(true);
-  }
+const ThemeChanger = () => {
   return (
     <Fragment>
-      <div className="theme-changer pointer" onClick={() => switchTheme()}>
-        <span>{theme ? "Light" : "Dark"} </span>
-        <span role="img" aria-label="moon">
-          {theme ? "🌕" : "🌑"}
-        </span>
-      </div>
+      <ContextConsumer>
+        {({ theme, switchTheme }) => {
+          console.log(theme);
+          return (
+            <div className="theme-changer pointer" onClick={switchTheme}>
+              <span role="img" aria-label="moon">
+                {theme === "light" ? "🌕" : "🌑"}
+              </span>
+            </div>
+          );
+        }}
+      </ContextConsumer>
 
       <style jsx>
         {`
           div {
-            outline: 1px solid red;
             margin-right: auto;
+          }
+
+          span {
+            font-size: 16px;
+          }
+
+          span:last-child {
+            font-size: 14px;
           }
         `}
       </style>
@@ -41,33 +52,40 @@ const ThemeChanger = () => {
   );
 };
 
-const Layout = props => {
+const Layout = ({ children }) => {
   return (
     <Fragment>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div style={layoutStyles.outline}>
-        <div style={layoutStyles.wrapper}>{props.children}</div>
 
-        <style jsx>{`
-          @font-face {
-            font-family: "circular";
-            src: url("../../static/fonts/ciruclar.ttf");
-            font-weight: normal;
-            font-style: normal;
-            font-display: auto;
-          }
+      <ContextConsumer>
+        {({ theme, color }) => {
+          return (
+            <div style={theme === "light" ? color.light : color.dark}>
+              <div style={layoutStyles.wrapper}>{children}</div>
 
-          @font-face {
-            font-family: "geo";
-            src: url("../../static/fonts/geo.ttf");
-            font-weight: normal;
-            font-style: normal;
-            font-display: auto;
-          }
-        `}</style>
-      </div>
+              <style jsx>{`
+                @font-face {
+                  font-family: "circular";
+                  src: url("../../static/fonts/ciruclar.ttf");
+                  font-weight: normal;
+                  font-style: normal;
+                  font-display: auto;
+                }
+
+                @font-face {
+                  font-family: "geo";
+                  src: url("../../static/fonts/geo.ttf");
+                  font-weight: normal;
+                  font-style: normal;
+                  font-display: auto;
+                }
+              `}</style>
+            </div>
+          );
+        }}
+      </ContextConsumer>
     </Fragment>
   );
 };
@@ -84,7 +102,7 @@ const Logo = () => (
 
 const Navbar = () => (
   <Fragment>
-    <nav className="navbar padding-top padding-bottom center">
+    <nav className="navbar padding-top padding-bottom flex-wrap center">
       <Logo />
       <ThemeChanger />
       <ul className="ca-routes">

@@ -75,7 +75,7 @@ const ArticleView = props => {
   }
   return (
     <Fragment>
-      <section>
+      <section className="owc">
         <h1 className="geo heading"> Testing Actions in NGRX Store </h1>
         <div className="meta flex">
           <Tag />
@@ -95,12 +95,22 @@ const ArticleView = props => {
             </span>
           </span>
         </div>
+
+        <article className="summary  geo">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            veniam, alias voluptas sunt corrupti sed expedita animi quaerat
+            accusamus dolorum soluta aliquam maiores possimus perferendis
+            consequatur asperiores repellendus pariatur fugiat.
+          </p>
+        </article>
       </section>
 
       <style jsx>{`
         section {
           height: 100vh;
           margin-top: 50px;
+          outline: 1px solid red;
         }
 
         .icon {
@@ -125,7 +135,7 @@ const ArticleView = props => {
 
         meta {
           align-item: center;
-          // margin-top: 15px;
+          margin-top: 115px;
         }
 
         * {
@@ -133,7 +143,7 @@ const ArticleView = props => {
         }
 
         .bullet {
-          margin: 0 10px;
+          margin: auto 10px;
         }
 
         h1 {
@@ -143,6 +153,13 @@ const ArticleView = props => {
           line-height: 52px;
           font-weight: 500;
           margin: 0;
+        }
+
+        p {
+          margin-top: 30px;
+          font-size: 20px;
+          color: rgba(38, 41, 58, 0.8);
+          line-height: 30px;
         }
       `}</style>
     </Fragment>
