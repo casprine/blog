@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from "react";
-import { localStore } from "../../utils/index";
-
+import { day } from "../../utils/helpers";
 const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: false
+    dark: !day()
   };
 
   change(props) {
@@ -15,15 +14,15 @@ class ContextProvider extends Component {
   }
 
   switchTheme = () => {
-    !this.state.dark
-      ? this.setState({ dark: true })
-      : this.setState({ dark: false });
+    this.state.dark
+      ? this.setState({ dark: false })
+      : this.setState({ dark: true });
   };
 
   componentDidMount() {
     const theme = localStorage.getItem("theme");
     if (theme) {
-      console.log(theme);
+      this.setState({ dark: theme });
     }
   }
 
@@ -32,7 +31,6 @@ class ContextProvider extends Component {
   }
 
   render() {
-    console.log("rendering", this.state.dark);
     return (
       <Fragment>
         <ContextContext.Provider

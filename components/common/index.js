@@ -60,7 +60,6 @@ const Layout = ({ children }) => {
 
       <ContextConsumer>
         {({ theme }) => {
-          console.log(theme);
           return (
             <div className={theme ? "dark" : "light"}>
               <div style={layoutStyles.wrapper}>{children}</div>
