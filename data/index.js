@@ -7,7 +7,7 @@ const tags = [
 
   {
     name: "React",
-    url: "https://cdn.worldvectorlogo.com/logos/react.svg"
+    url: "https://arcweb.co/wp-content/uploads/2016/10/react-logo-1000-transparent.png"
   },
   {
     name: "CSS",
