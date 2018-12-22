@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Colors } from "./index";
+import { Colors, TagImage } from "./index";
 import Link from "next/link";
 import "../../static/sass/global.scss";
 import { trimArticle, tagSelector } from "../../utils/helpers";
@@ -16,7 +16,7 @@ const Article = props => {
             <div className="heading"> Testing Actions in NGRX Store </div>
             <p>{trimArticle(art, 100)}</p>
             <div className="footer  flex">
-              {/* {tagSelector("javascript", "img")} */}
+              {tagSelector("Javascript", "img")}
               <span> Dec 19, 2018</span>
             </div>
           </div>
@@ -46,12 +46,7 @@ const Article = props => {
           font-size: 20px;
           font-family: "geo";
         }
-        img {
-          width: 20px;
-          height: 20px;
-          margin-right: auto;
-        }
-
+       
         span {
           font-size: 14ppx;
           margin: auto 0;

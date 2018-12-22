@@ -4,7 +4,6 @@ import tags from "../../data/index";
 import "../../static/sass/global.scss";
 
 const Tag = ({ url, name }) => {
-  console.log(url, name);
   return (
     <Fragment>
       <div className="flex tag">

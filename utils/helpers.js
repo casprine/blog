@@ -1,7 +1,6 @@
 import React from "react";
-
 import { Tag } from "../components/common/section";
-import { TagIamge } from "../components/common/index";
+import { TagImage } from "../components/common/index";
 import tags from "../data/index";
 
 // trimArticle using substring
@@ -25,12 +24,20 @@ A function that return the type of tag to use.
 @param {String} langugae - the name of the language
 @param {String || Boolean} type - the type of tag to return 
 */
+function checker(language) {
+  const tag = tags.filter(tag => {
+    return tag.name === language;
+  });
+
+  return tag;
+}
 
 export function tagSelector(language, type) {
-  if (type === "img") {
-    const tag = tags.filter(tag => {
-      return tag.name === language;
-    });
+  const tag = checker(language);
+  if (type === "tag") {
     return <Tag {...tag} />;
+  } else if (type === "img") {
+    // console.log({ ...tag });
+    return <TagImage {...tag} />;
   }
 }
