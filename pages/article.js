@@ -4,6 +4,7 @@ import { withRouter } from "next/router";
 import { Layout, Header } from "../components/common/index";
 import { Tags, SectionHeader } from "../components/common/section";
 import ArticleView from "../components/common/article";
+import Footer from "../components/common/footer";
 
 import Head from "next/head";
 
@@ -17,8 +18,8 @@ export default withRouter(props => {
       <Layout>
         <Header />
         <Tags />
-
         <ArticleView />
+        <Footer />
       </Layout>
     </Fragment>
   );

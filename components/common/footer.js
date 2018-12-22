@@ -9,19 +9,19 @@ const Footer = () => (
       <Logo />
       <div className="ca-routes" id="fotter-links">
         <Link href="https://dribbble.com/casprine" className="link-inverse">
-          <span className="link-inverse">Dribbble</span>
+          <span className="link-inverse white">Dribbble</span>
         </Link>
         <Link href="https://www.uplabs.com/casprine">
-          <span className="link-inverse">Uplabs</span>
+          <span className="link-inverse white">Uplabs</span>
         </Link>
         <Link href="https://www.twitter.com/casprine">
-          <span className="link-inverse">Twitter</span>
+          <span className="link-inverse white">Twitter</span>
         </Link>
         <Link href="https://www.github.com/casprine">
-          <span className="link-inverse">Github</span>
+          <span className="link-inverse white">Github</span>
         </Link>
         <Link to="/writings" className="link-inverse">
-          <span className="link-inverse">Bookmarked</span>
+          <span className="link-inverse white">Bookmarked</span>
         </Link>
       </div>
     </nav>

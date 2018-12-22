@@ -4,6 +4,7 @@ import { Colors } from "./index";
 import { Tag } from "./section";
 import ShareIt from "./share";
 import "../../static/sass/prism.scss";
+import { tagSelector } from "../../utils/helpers";
 
 const ArticleView = props => {
   const [saved, setStatus] = useState(false);
@@ -21,10 +22,10 @@ const ArticleView = props => {
       <section className="">
         <h1 className="geo heading"> React Hooks for Dummies</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
-          <Tag />
-          <span className="bullet">•</span>
-          <span className="date">Dec 19, 2018</span>
-          <span className="bullet">•</span>
+          {tagSelector("Javascript", "img")}
+          <span className="bullet white">•</span>
+          <span className="date white">Dec 19, 2018</span>
+          <span className="bullet white">•</span>
           <span className="flex" onClick={() => saveArticle()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +34,7 @@ const ArticleView = props => {
             >
               <path d="M128 80v380c0 3.3 3.8 5.2 6.4 3.2l116.8-92c2.9-2.1 6.8-2.1 9.6 0l116.8 92c2.6 2 6.4.1 6.4-3.2V80c0-17.7-14.3-32-32-32H160c-17.7 0-32 14.3-32 32z" />
             </svg>
-            <span className="pointer">
+            <span className="pointer white">
               {saved ? " Remove from bookmark" : " Save Article"}
             </span>
           </span>
@@ -107,14 +108,12 @@ const ArticleView = props => {
             eveniet omnis corporis nulla accusantium.
           </p>
         </article>
-
         <ShareIt />
       </section>
 
       <style jsx>{`
         section {
           margin-top: 50px;
-          // width: 85%;
           margin: 30px auto;
           paddding-bottm: 50px;
         }
@@ -123,21 +122,22 @@ const ArticleView = props => {
           width: 20px;
           height: 20px;
           fill: ${Colors.grey};
-          margin: auto 0;
           cursor: pointer;
+          margin-right: 5px;
         }
 
         .save {
           width: 20px;
           height: 20px;
           fill: ${Colors.green};
-          margin: auto 0;
+          margin-right: 5px;
           cursor: pointer;
         }
 
         span {
           margin: auto 0;
         }
+
         * {
           color: ${Colors.grey};
         }

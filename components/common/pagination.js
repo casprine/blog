@@ -5,14 +5,14 @@ const Pagination = () => {
     <Fragment>
       <nav className="flex">
         <div className="left">
-          <span>
+          <span className="white">
             Page <span className="start"> 1</span> of
           </span>
-          <span className="end"> 40</span>
+          <span className="end white"> 40</span>
         </div>
 
         <div className="right link-inverse">
-          <span>Next</span>
+          <span className="white">Next</span>
         </div>
       </nav>
 

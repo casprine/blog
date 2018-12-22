@@ -290,10 +290,6 @@ h6 {
 
 // dark theme styling
 .dark {
-  * {
-    // outline: 1px solid red !important;
-  }
-
   background: black !important;
   h1,
   h2,
@@ -306,6 +302,14 @@ h6 {
   ul,
   li {
     color: white !important;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .icon {
+    fill: white !important;
   }
 
   .article {
