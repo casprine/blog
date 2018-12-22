@@ -19,10 +19,9 @@ export default () => {
         <SectionHeader />
         <Tags />
         <div className="articles grid-3">
-          {/* {data.map(post => { */}
-          {/* return <Article {...post} />; */}
-          {/* })} */}
-          <Article />
+          {data.map(post => {
+            return <Article {...post} />;
+          })}
         </div>
         <Pagination />
         <Footer />

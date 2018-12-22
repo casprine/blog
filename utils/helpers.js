@@ -33,11 +33,11 @@ function checker(language) {
 }
 
 export function tagSelector(language, type) {
-  const tag = checker(language);
+  const serialized = language.toString();
+  const tag = checker(serialized);
   if (type === "tag") {
     return <Tag {...tag} />;
   } else if (type === "img") {
-    // console.log({ ...tag });
     return <TagImage {...tag} />;
   }
 }

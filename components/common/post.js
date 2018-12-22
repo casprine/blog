@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Colors, TagImage } from "./index";
+import { Colors } from "./index";
 import Link from "next/link";
 import "../../static/sass/global.scss";
 import { trimArticle, tagSelector } from "../../utils/helpers";
@@ -7,16 +7,16 @@ import { trimArticle, tagSelector } from "../../utils/helpers";
 const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
 harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
 
-const Article = props => {
+const Article = ({ name, tag, title }) => {
   return (
     <Fragment>
-      <Link href={`/article/?${props.title}`} as={`/${props.title}`}>
+      <Link href={`/article/?${title}`} as={`/${title}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading"> Testing Actions in NGRX Store </div>
             <p>{trimArticle(art, 100)}</p>
             <div className="footer  flex">
-              {tagSelector("Javascript", "img")}
+              {tagSelector(tag, "img")}
               <span> Dec 19, 2018</span>
             </div>
           </div>
