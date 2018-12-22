@@ -1,5 +1,5 @@
 import React from "react";
-import { Tag } from "../components/common/section";
+import { ViewTag } from "../components/common/section";
 import { TagImage } from "../components/common/index";
 import tags from "../data/index";
 
@@ -28,7 +28,6 @@ function checker(language) {
   const tag = tags.filter(tag => {
     return tag.name === language;
   });
-
   return tag;
 }
 
@@ -36,7 +35,7 @@ export function tagSelector(language, type) {
   const serialized = language.toString();
   const tag = checker(serialized);
   if (type === "tag") {
-    return <Tag {...tag} />;
+    return <ViewTag {...tag} />;
   } else if (type === "img") {
     return <TagImage {...tag} />;
   }

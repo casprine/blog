@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Prism from "prismjs";
 import { Colors } from "./index";
-import { Tag } from "./section";
 import ShareIt from "./share";
 import "../../static/sass/prism.scss";
 import { tagSelector } from "../../utils/helpers";
@@ -22,7 +21,7 @@ const ArticleView = props => {
       <section className="">
         <h1 className="geo heading"> React Hooks for Dummies</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
-          {tagSelector("Javascript", "img")}
+          {tagSelector("Javascript", "tag")}
           <span className="bullet white">•</span>
           <span className="date white">Dec 19, 2018</span>
           <span className="bullet white">•</span>
