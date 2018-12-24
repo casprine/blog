@@ -4,7 +4,7 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: day()
+    dark: !day()
   };
 
   change(props) {
@@ -19,13 +19,6 @@ class ContextProvider extends Component {
       : this.setState({ dark: true });
   };
 
-  componentDidMount() {
-    // const theme = localStorage.getItem("theme");
-    // if (theme) {
-    //   this.setState({ dark: theme });
-    // }
-  }
-
   componentDidUpdate() {
     // localStorage.setItem("theme", this.state.dark);
   }
@@ -39,8 +32,6 @@ class ContextProvider extends Component {
             switchTheme: this.switchTheme
           }}
         >
-
-    
           {this.props.children}
         </ContextContext.Provider>
       </Fragment>

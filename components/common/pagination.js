@@ -10,7 +10,6 @@ const Pagination = () => {
           </span>
           <span className="end white"> 40</span>
         </div>
-        <Casrpine></Casrpine> 
         <div className="right link-inverse">
           <span className="white">Next</span>
         </div>
@@ -38,4 +37,4 @@ const Pagination = () => {
   );
 };
 
-export { Pagination };
+export default Pagination;

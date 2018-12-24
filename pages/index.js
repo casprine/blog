@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Layout, Header } from "../components/common/index";
 import { Tags, SectionHeader } from "../components/common/section";
 import Article from "../components/common/post";
-import { Pagination } from "../components/common/pagination";
+import Pagination from "../components/common/pagination";
 import Footer from "../components/common/footer";
 import data from "../data.json";
 import "../static/sass/global.scss";

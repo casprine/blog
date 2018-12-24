@@ -8,7 +8,7 @@ const Footer = () => (
     <nav className="navbar  padding-bottom center">
       <Logo />
       <div className="ca-routes" id="fotter-links">
-        <Link href="https://dribbble.com/casprine" className="link-inverse">
+        <Link href="https://dribbble.com/casprine">
           <span className="link-inverse white">Dribbble</span>
         </Link>
         <Link href="https://www.uplabs.com/casprine">

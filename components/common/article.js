@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Prism from "prismjs";
+import Head from "next/head";
 import { Colors } from "./index";
 import ShareIt from "./share";
 import "../../static/sass/prism.scss";
@@ -16,8 +17,14 @@ const ArticleView = props => {
     Prism.highlightAll();
   });
 
+  console.log(props);
+
   return (
     <Fragment>
+      <Head>
+        <title />
+      </Head>
+
       <section className="">
         <h1 className="geo heading"> React Hooks for Dummies</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
@@ -135,10 +142,6 @@ const ArticleView = props => {
 
         span {
           margin: auto 0;
-        }
-
-        * {
-          color: ${Colors.grey};
         }
 
         .bullet {

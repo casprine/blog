@@ -49,7 +49,6 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   transition: all 200ms ease;
   cursor: pointer;
   &:hover {
-    padding-bottom: 4px;
     border-bottom: 2px solid $primary;
   }
 }
@@ -63,7 +62,6 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   display: inline-table;
 
   &:hover {
-    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
   }
 }
