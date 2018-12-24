@@ -36,7 +36,7 @@ const ShareLink = () => {
           width: 180px;
           border-radius: 8px;
           background: rgb(0, 172, 237);
-          padding: 13px 20px;
+          padding: 10px 20px;
           color: white;
           display: flex;
           align-items: center;
@@ -66,7 +66,6 @@ const ShareLink = () => {
           fill: white;
         }
         .share-with {
-          font-size: 18px;
           margin: auto 0;
         }
       `}</style>
