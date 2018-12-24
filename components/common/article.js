@@ -5,6 +5,7 @@ import { Colors } from "./index";
 import ShareIt from "./share";
 import "../../static/sass/prism.scss";
 import { tagSelector } from "../../utils/helpers";
+import { cache } from "../../utils/index";
 
 const ArticleView = props => {
   const [saved, setStatus] = useState(false);
@@ -15,6 +16,7 @@ const ArticleView = props => {
 
   useEffect(() => {
     Prism.highlightAll();
+    console.log(cache.open());
   });
 
   console.log(props);

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import Head from "next/head";
 import { Layout, Header } from "../components/common/index";
 import { Tags, SectionHeader } from "../components/common/section";
@@ -8,24 +8,48 @@ import Footer from "../components/common/footer";
 import data from "../data.json";
 import "../static/sass/global.scss";
 
-export default () => {
-  return (
-    <Fragment>
-      <Head>
-        <title>Casprine Assempah</title>
-      </Head>
-      <Layout>
-        <Header />
-        <SectionHeader />
-        <Tags />
-        <div className="articles grid-3">
-          {data.map(post => {
-            return <Article {...post} />;
-          })}
-        </div>
-        <Pagination />
-        <Footer />
-      </Layout>
-    </Fragment>
-  );
-};
+class Index extends Component {
+  componentDidMount = () => {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("../static/sw.js").then(
+          function(registration) {
+            // Registration was successful
+            console.log(
+              "ServiceWorker registration successful with scope: ",
+              registration.scope
+            );
+          },
+          function(err) {
+            // registration failed :(
+            console.log("ServiceWorker registration failed: ", err);
+          }
+        );
+      });
+    }
+  };
+
+  render() {
+    return (
+      <Fragment>
+        <Head>
+          <title>Casprine Assempah</title>
+        </Head>
+        <Layout>
+          <Header />
+          <SectionHeader />
+          <Tags />
+          <div className="articles grid-3">
+            {data.map(post => {
+              return <Article {...post} />;
+            })}
+          </div>
+          <Pagination />
+          <Footer />
+        </Layout>
+      </Fragment>
+    );
+  }
+}
+
+export default Index;

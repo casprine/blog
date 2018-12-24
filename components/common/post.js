@@ -46,7 +46,6 @@ const Article = ({ name, tag, title }) => {
           font-size: 20px;
           font-family: "geo";
         }
-       
         span {
           font-size: 14ppx;
           margin: auto 0;

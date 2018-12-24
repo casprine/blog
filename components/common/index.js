@@ -25,7 +25,7 @@ const ThemeChanger = () => {
           return (
             <div className="theme-changer pointer" onClick={switchTheme}>
               <span role="img" aria-label="moon">
-                {theme ? "🌑" : "🌕"}
+                {theme ? "🌚" : "🌝"}
               </span>
             </div>
           );
@@ -39,7 +39,7 @@ const ThemeChanger = () => {
           }
 
           span {
-            font-size: 16px;
+            font-size: 20px !important;
           }
 
           span:last-child {
