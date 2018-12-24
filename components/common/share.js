@@ -4,18 +4,30 @@ import { Colors } from "./index";
 const ShareLink = () => {
   return (
     <Fragment>
-      <a href="">
+      <a href="https://twitter.com/intent/tweet?text=Hello%20world">
         <div className="share-button ">
           <div className="wrapper  flex">
-            <span className="icon flex">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z" />
+            <span className="icon">
+              <svg
+                class="svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                stroke-linejoin="round"
+                stroke-miterlimit="1.414"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="title"
+                viewBox="0 0 32 32"
+                preserveAspectRatio="xMidYMid meet"
+                id="twitter"
+              >
+                <title id="title">twitter</title>
+                <g>
+                  <path d="M16,28c11,0 12,-1 12,-12c0,-11 -1,-12 -12,-12c-11,0 -12,1 -12,12c0,11 1,12 12,12Zm5.825,-13.901c0,3.669 -2.889,7.901 -8.172,7.901l0,0c-1.622,0 -3.132,-0.46 -4.403,-1.248c0.225,0.026 0.454,0.039 0.685,0.039c1.346,0 2.585,-0.444 3.568,-1.189c-1.258,-0.022 -2.318,-0.825 -2.684,-1.928c0.175,0.032 0.355,0.05 0.54,0.05c0.262,0 0.516,-0.034 0.758,-0.098c-1.315,-0.255 -2.305,-1.377 -2.305,-2.722c0,-0.013 0,-0.024 0.001,-0.036c0.387,0.208 0.829,0.333 1.301,0.348c-0.772,-0.498 -1.279,-1.348 -1.279,-2.312c0,-0.509 0.143,-0.985 0.389,-1.396c1.417,1.681 3.534,2.786 5.921,2.902c-0.049,-0.204 -0.074,-0.416 -0.074,-0.633c0,-1.533 1.286,-2.777 2.872,-2.777c0.826,0 1.573,0.338 2.097,0.877c0.654,-0.124 1.269,-0.356 1.824,-0.674c-0.215,0.649 -0.67,1.192 -1.263,1.536c0.581,-0.067 1.134,-0.216 1.649,-0.437c-0.384,0.557 -0.872,1.046 -1.433,1.438c0.006,0.119 0.008,0.239 0.008,0.359Z" />
+                </g>
               </svg>
             </span>
-            <div className="share-with flex">
-              <span className="text geo"> Share With Twitter</span>
-            </div>
           </div>
+          <span className="share-with geo">Share With Twitter</span>
         </div>
       </a>
 
@@ -24,34 +36,38 @@ const ShareLink = () => {
           width: 180px;
           border-radius: 8px;
           background: rgb(0, 172, 237);
-          padding: 15px 15px;
+          padding: 13px 20px;
           color: white;
-          justify-content: center;
-        }
-        svg {
-          width: 15px;
-          height: 15px;
-          display: block;
-          fill: rgb(0, 172, 237);
-          margin: 0 auto;
-        }
-        .text {
-          font-size: 17px;
-          margin: auto 0;
-        }
-
-        .share-with {
-          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
 
         .icon {
-          padding: 4px;
-          width: 18px;
-          height: 18px;
-          align-items: center;
-          justify-content: center;
-          border-radius: 8px;
-          background: white;
+          display: inline-block;
+          flex: 0 0 32px;
+          width: 32px;
+          height: 32px;
+          min-width: 32px;
+          min-height: 32px;
+          position: relative;
+          color: inherit;
+        }
+
+        svg {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          height: 100%;
+          width: 100%;
+          color: inherit;
+          fill: white;
+        }
+        .share-with {
+          font-size: 18px;
+          margin: auto 0;
         }
       `}</style>
     </Fragment>
@@ -69,6 +85,7 @@ const ShareIt = () => {
             😊
           </span>
         </p>
+
         <ShareLink />
       </div>
 

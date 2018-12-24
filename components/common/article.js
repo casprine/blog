@@ -114,6 +114,7 @@ const ArticleView = props => {
             eveniet omnis corporis nulla accusantium.
           </p>
         </article>
+
         <ShareIt />
       </section>
 
