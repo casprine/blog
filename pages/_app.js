@@ -1,6 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
-import { ContextProvider } from "../components/context/index.js";
+import { ContextProvider } from "../context/index.js";
 
 class MyApp extends App {
   render() {

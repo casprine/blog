@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
-
 import { Logo, ThemeChanger } from "../common/index";
 
 const Navbar = () => (
