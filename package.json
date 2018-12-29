@@ -14,10 +14,11 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "dev": "node server.js",
     "build": "next build",
     "export": "next export",
-    "prod": "NODE_ENV=production node server.js"
+    "prod": "NODE_ENV=production node server.js",
+    "start": "next start -p 8000"
   },
   "eslintConfig": {
     "extends": "react-app"
