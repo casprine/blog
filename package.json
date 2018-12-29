@@ -6,12 +6,12 @@
     "@zeit/next-sass": "^1.0.1",
     "express": "^4.16.4",
     "next": "^7.0.2",
+    "next-manifest": "^1.6.0",
     "node-sass": "^4.10.0",
     "prismjs": "^1.15.0",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
-    "react-scripts": "2.1.1",
-    "style-loader": "^0.23.1"
+    "react-scripts": "2.1.1"
   },
   "scripts": {
     "dev": "node server.js",

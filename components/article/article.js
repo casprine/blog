@@ -14,7 +14,7 @@ const Article = ({ name, tag, title }) => {
           <div className="wrapper">
             <div className="heading geo"> Testing Actions in NGRX Store </div>
             <p>{trimArticle(art, 100)}</p>
-            <div className="footer  flex">
+            <div className="footer flex">
               {tagSelector(tag, "img")}
               <span> Dec 19, 2018</span>
             </div>
