@@ -5,7 +5,7 @@ import "../../static/sass/index.scss";
 
 const Footer = () => (
   <Fragment>
-    <nav className="footer  padding-bottom center">
+    <nav className="footer padding-bottom center">
       <Logo />
       <div className="ca-routes" id="fotter-links">
         <Link href="https://dribbble.com/casprine">
