@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Colors } from "../common/index";
 import Link from "next/link";
 import { trimArticle, tagSelector } from "../../utils/helpers";
-// import "../../static/sass/global.scss";
 
 const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
 harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;

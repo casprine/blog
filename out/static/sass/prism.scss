@@ -1,0 +1,139 @@
+/* PrismJS 1.15.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+jsx+typescript+tsx */
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #ccc;
+  background: none;
+  font-family: Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-align: left;
+  font-size: 18px;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre {
+  min-width: inherit;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 20px 68px;
+}
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 50px 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #0f111a;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+  outline: 1px solid green;
+}
+
+.token.punctuation {
+  color: #ccc;
+  padding: 3px;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+  color: pink;
+}
+
+.token.function-name {
+  color: white;
+}
+
+.token,
+.token.number,
+.token {
+  color: #82aaff;
+}
+
+.boolean {
+  color: #f78c6c;
+}
+
+.function {
+  color: #82aaff;
+}
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #82aaff;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #c792ea;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #82aaff;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #b2ccd6;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: green;
+}

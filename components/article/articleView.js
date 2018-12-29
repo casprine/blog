@@ -4,7 +4,6 @@ import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import "../../static/sass/prism.scss";
 import { tagSelector } from "../../utils/helpers";
-// import { cache } from "../../utils/index";
 
 const ArticleView = props => {
   const [saved, setStatus] = useState(false);
