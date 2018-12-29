@@ -6,10 +6,6 @@ import "../../static/sass/global.scss";
 import { ContextConsumer } from "../context/index";
 
 const layoutStyles = {
-  outline: {
-    backgroundColor: "#ebf0f6"
-  },
-
   wrapper: {
     width: "85vw",
     marginRight: "auto",

@@ -16,7 +16,7 @@ const ArticleView = props => {
 
   useEffect(() => {
     Prism.highlightAll();
-    console.log(cache.open());
+
   });
 
   console.log(props);
