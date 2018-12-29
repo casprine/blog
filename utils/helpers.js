@@ -1,5 +1,5 @@
 import React from "react";
-import { ViewTag } from "../components/common/section";
+import { ViewTag } from "../components/section";
 import { TagImage } from "../components/common/index";
 import tags from "../data/index";
 

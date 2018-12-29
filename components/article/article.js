@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Colors } from "./index";
+import { Colors } from "../common/index";
 import Link from "next/link";
 import "../../static/sass/global.scss";
 import { trimArticle, tagSelector } from "../../utils/helpers";

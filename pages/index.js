@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from "react";
 import Head from "next/head";
 import { Layout, Navbar } from "../components/common/index";
-import { Tags, SectionHeader } from "../components/common/section";
-import Article from "../components/common/post";
-import Pagination from "../components/common/pagination";
-import Footer from "../components/common/footer";
+import { Tags, SectionHeader } from "../components/section/index";
+import Article from "../components/article/post";
+import Pagination from "../components/navigation/pagination";
+import Footer from "../components/navigation/footer";
 import data from "../data.json";
 import "../static/sass/global.scss";
 
@@ -40,8 +40,8 @@ class Index extends Component {
           <SectionHeader />
           <Tags />
           <div className="articles grid-3">
-            {data.map((post ,i ) => {
-              return <Article {...post}  key={i} />;
+            {data.map((post, i) => {
+              return <Article {...post} key={i} />;
             })}
           </div>
           <Pagination />

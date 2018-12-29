@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
-import { Logo } from "./index";
+import { Logo } from "../common/index";
 import "../../static/sass/index.scss";
 
 const Footer = () => (

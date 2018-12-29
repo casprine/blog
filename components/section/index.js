@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Colors } from "./index";
+import { Colors } from "../common/index";
 import tags from "../../data/index";
 import "../../static/sass/global.scss";
 

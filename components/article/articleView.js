@@ -1,11 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Prism from "prismjs";
 import Head from "next/head";
-import { Colors } from "./index";
-import ShareIt from "./share";
+import { Colors } from "../common/index";
+import ShareIt from "../common/share";
 import "../../static/sass/prism.scss";
 import { tagSelector } from "../../utils/helpers";
-import { cache } from "../../utils/index";
+// import { cache } from "../../utils/index";
 
 const ArticleView = props => {
   const [saved, setStatus] = useState(false);
@@ -16,7 +16,6 @@ const ArticleView = props => {
 
   useEffect(() => {
     Prism.highlightAll();
-
   });
 
   console.log(props);
@@ -24,7 +23,7 @@ const ArticleView = props => {
   return (
     <Fragment>
       <Head>
-        <title />
+        <title> React Hooks for Dummies </title>
       </Head>
 
       <section className="">
