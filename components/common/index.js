@@ -100,15 +100,15 @@ const Navbar = () => (
       <Logo />
       <ul className="ca-routes">
         <Link href="https://casprine-dev.netlify.com/work">
-          <a className="link">Work</a>
+          <span className="link">Work</span>
         </Link>
         <Link href="https://casprine-dev.netlify.com/design">
-          <a className="link" href="https://casprine-dev.netlify.com/design">
+          <span className="link" href="https://casprine-dev.netlify.com/design">
             Design
-          </a>
+          </span>
         </Link>
         <Link href="/bookmark">
-          <a className="link">Bookmarked</a>
+          <span className="link">Bookmarked</span>
         </Link>
       </ul>
       <ThemeChanger />
