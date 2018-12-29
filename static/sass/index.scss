@@ -7,12 +7,8 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 // Header styling
 
 .navbar {
-  // outline: 1px solid red;
-  * {
-    // outline: 1px solid red;
-  }
+  padding-bottom: 40px;
   .ca-routes {
-    // margin-right: auto;
     width: 20%;
     display: flex;
     justify-content: space-between;

@@ -13,7 +13,7 @@ const Article = ({ name, tag, title }) => {
       <Link as={`/p/${title}`} href={`/article/?${title}`}>
         <article className="article">
           <div className="wrapper">
-            <div className="heading"> Testing Actions in NGRX Store </div>
+            <div className="heading geo"> Testing Actions in NGRX Store </div>
             <p>{trimArticle(art, 100)}</p>
             <div className="footer  flex">
               {tagSelector(tag, "img")}
@@ -27,8 +27,8 @@ const Article = ({ name, tag, title }) => {
         .article {
           cursor: pointer;
           box-shadow: 0 1px 3px 0 rgba(38, 41, 58, 0.06);
-          // border-top: 5px solid ${Colors.primary};
           border-radius: 3px;
+          padding: 10px 0;
           transition: 0.3s ease-out;
         }
 
