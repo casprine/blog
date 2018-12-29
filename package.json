@@ -17,7 +17,7 @@
     "dev": "node server.js",
     "build": "next build",
     "export": "next export",
-    "prod": "NODE_ENV=production node server.js",
+    "prod": "yarn build && yarn export && cp static/_redirects out/_redirects",
     "start": "next start -p 8000"
   },
   "eslintConfig": {
