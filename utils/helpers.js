@@ -1,6 +1,6 @@
 import React from "react";
-import { ViewTag } from "../components/section";
 import { TagImage } from "../components/common/index";
+import { ViewTag } from "../components/section/index";
 import tags from "../data/index";
 
 // trimArticle using substring
