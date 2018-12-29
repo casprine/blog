@@ -1,14 +1,15 @@
 import React, { Fragment } from "react";
-import "../static/sass/global.scss";
 import { withRouter } from "next/router";
-import { Layout, Navbar } from "../components/common/index";
-import { Tags, SectionHeader } from "../components/common/section";
-import ArticleView from "../components/common/article";
-import Footer from "../components/common/footer";
+import { Layout } from "../components/common/index";
+import { Tags } from "../components/common/index";
+import { ArticleView } from "../components/article/index";
+import { Footer, Navbar } from "../components/navigation/index";
+import "../static/sass/global.scss";
 
 import Head from "next/head";
 
 export default withRouter(props => {
+  console.log(props);
   return (
     <Fragment>
       <Head>
