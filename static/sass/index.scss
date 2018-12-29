@@ -8,6 +8,7 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 
 .navbar {
   padding-bottom: 40px;
+  outline: 1px solid red;
   .ca-routes {
     width: 20%;
     display: flex;
@@ -16,6 +17,8 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 }
 
 .footer {
+  outline: 1px solid red;
+
   .ca-routes {
     width: 30%;
     justify-content: space-between;
