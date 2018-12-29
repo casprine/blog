@@ -6,20 +6,16 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 
 // Header styling
 
-.ca-routes {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-
-  //hack to space out routes since flexbox is not working somehow
-  //Will come back later and fix you b.
+.navbar {
+  // outline: 1px solid red;
   * {
-    margin: 0 10px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    // outline: 1px solid red;
+  }
+  .ca-routes {
+    // margin-right: auto;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

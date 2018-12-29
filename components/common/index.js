@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
 
 const Logo = () => (
   <Fragment>
-    <Link href="/" to="/">
+    <Link href="/">
       <div className="ca-logo center">
         <div> C </div>
       </div>
@@ -96,9 +96,9 @@ const Logo = () => (
 
 const Navbar = () => (
   <Fragment>
-    <nav className="navbar padding-top padding-bottom flex-wrap center">
+    <nav className="navbar padding-top  flex-wrap center">
       <Logo />
-      <ul className="ca-routes">
+      <div className="ca-routes">
         <Link href="https://casprine-dev.netlify.com/work">
           <span className="link">Work</span>
         </Link>
@@ -110,16 +110,9 @@ const Navbar = () => (
         <Link href="/bookmark">
           <span className="link">Bookmarked</span>
         </Link>
-      </ul>
+      </div>
       <ThemeChanger />
     </nav>
-  </Fragment>
-);
-const Header = () => (
-  <Fragment>
-    <div className="header">
-      <Navbar />
-    </div>
   </Fragment>
 );
 
@@ -141,4 +134,4 @@ const Colors = {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
 };
 
-export { Layout, Header, Colors, Logo, TagImage };
+export { Layout, Navbar, Colors, Logo, TagImage };

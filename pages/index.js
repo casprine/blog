@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Head from "next/head";
-import { Layout, Header } from "../components/common/index";
+import { Layout, Navbar } from "../components/common/index";
 import { Tags, SectionHeader } from "../components/common/section";
 import Article from "../components/common/post";
 import Pagination from "../components/common/pagination";
@@ -36,12 +36,12 @@ class Index extends Component {
           <title>Casprine Assempah</title>
         </Head>
         <Layout>
-          <Header />
+          <Navbar />
           <SectionHeader />
           <Tags />
           <div className="articles grid-3">
-            {data.map(post => {
-              return <Article {...post} />;
+            {data.map((post ,i ) => {
+              return <Article {...post}  key={i} />;
             })}
           </div>
           <Pagination />
