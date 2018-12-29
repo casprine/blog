@@ -14,7 +14,6 @@ export default withRouter(props => {
       <Head>
         <title>Blog Post</title>
       </Head>
-
       <Layout>
         <Header />
         <Tags />

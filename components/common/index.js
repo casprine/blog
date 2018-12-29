@@ -107,7 +107,7 @@ const Navbar = () => (
             Design
           </a>
         </Link>
-        <Link href="/bookmark" className="link">
+        <Link href="/bookmark">
           <a className="link">Bookmarked</a>
         </Link>
       </ul>
