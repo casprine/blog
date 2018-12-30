@@ -20,6 +20,7 @@
     "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
     "build": "next build",
     "export": "next export",
+    "netlify": "npm run build && npm run export && mv /_redirects  ./out",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
