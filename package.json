@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
     "express": "^4.16.4",
     "next": "^7.0.2",
     "next-manifest": "^1.6.0",
