@@ -5,7 +5,6 @@ import { Tags, SectionHeader } from "../components/section/index";
 import { ArticleCard } from "../components/article/index";
 import { Navbar, Footer, Pagination } from "../components/navigation/index";
 import data from "../data.json";
-
 class Index extends Component {
   // componentDidMount = () => {
   //   if ("serviceWorker" in navigator) {
