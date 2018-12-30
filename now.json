@@ -3,7 +3,9 @@
   "builds": [
     { "src": "server.js", "use": "@now/node-server" },
     { "src": "next.config.js", "use": "@now/next" },
-    { "src": "static/*", "use": "@now/static" }
+    { "src": "static/*", "use": "@now/static" },
+    { "src": "static/fonts/", "use": "@now/static" },
+    { "src": "static/sass/*", "use": "@now/static" }
   ],
-  "alias": ["casper.now.sh"]
+  "alias": ["castter.now.sh"]
 }
