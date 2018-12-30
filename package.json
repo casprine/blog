@@ -18,6 +18,7 @@
     "dev": "node server.js",
     "build": "next build",
     "export": "next export",
+    "heroku-postbuild": "npm run build",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
