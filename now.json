@@ -1,11 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server.js", "use": "@now/node-server" },
+    { "src": "*/server.js", "use": "@now/node-server" },
     { "src": "next.config.js", "use": "@now/next" },
     { "src": "static/*", "use": "@now/static" },
-    { "src": "static/fonts/", "use": "@now/static" },
-    { "src": "static/sass/*", "use": "@now/static" }
-  ],
-  "alias": ["castter.now.sh"]
+    { "src": "static/fonts/", "use": "@now/static" }
+  ]
 }

@@ -24,6 +24,18 @@ const Navbar = () => (
       </div>
       <ThemeChanger />
     </nav>
+
+    <style jsx>{`
+      .navbar {
+        padding-bottom: 40px;
+      }
+
+      .ca-routes {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+      }
+    `}</style>
   </Fragment>
 );
 

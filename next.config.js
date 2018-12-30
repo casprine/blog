@@ -12,7 +12,7 @@ module.exports = (phase, { defaultConfig }) => {
     return {};
   }
 
-  const withSass = require("@zeit/next-sass");
+  const withCSS = require("@zeit/next-css");
 
-  return withSass();
+  return withCSS();
 };

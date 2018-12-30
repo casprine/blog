@@ -4,24 +4,13 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: day()
+    dark: !day()
   };
-
-  change(props) {
-    this.setState({
-      dark: props
-    });
-  }
-
   switchTheme = () => {
     this.state.dark
       ? this.setState({ dark: false })
       : this.setState({ dark: true });
   };
-
-  componentDidUpdate() {
-    // localStorage.setItem("theme", this.state.dark);
-  }
 
   render() {
     return (
