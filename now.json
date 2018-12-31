@@ -3,9 +3,12 @@
   "alias": "casprer.now.sh",
   "public": true,
   "builds": [
-    { "src": "server.js", "use": "@now/node-server" },
     { "src": "next.config.js", "use": "@now/next@canary" },
-    { "src": "static/*", "use": "@now/static" },
+    { "src": "static/**", "use": "@now/static" },
     { "src": "static/fonts/", "use": "@now/static" }
+  ],
+  "routes": [
+    {"src": "/p/(?<id>.+)", "dest": "/article?slug=$id"},
+    {"src": "/(.*)", "dest": "/$1"}
   ]
 }
