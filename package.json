@@ -9,17 +9,18 @@
     "next-manifest": "^1.6.0",
     "node-sass": "^4.10.0",
     "prismjs": "^1.15.0",
+    "processmd": "^4.4.0",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.1.1",
     "sass-loader": "7.1.0"
   },
   "scripts": {
-    "dev": "node server.js",
+    "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
     "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
-    "build": "next build",
+    "dev": "npm run content && node server.js",
     "export": "next export",
-    "netlify": "npm run build && npm run export && mv /_redirects  ./out",
+    "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
