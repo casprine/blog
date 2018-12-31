@@ -9,7 +9,7 @@ harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
 const Article = ({ name, tag, title }) => {
   return (
     <Fragment>
-      <Link as={`/p/${title}`} href={`/article/?${title}`}>
+      <Link href={`/article?${title}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo"> Testing Actions in NGRX Store </div>
