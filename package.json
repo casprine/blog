@@ -18,7 +18,7 @@
   "scripts": {
     "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
     "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
-    "dev": "npm run content && node server.js",
+    "dev": "node server.js",
     "export": "next export",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
