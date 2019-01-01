@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Colors } from "../common/index";
 import Link from "next/link";
-import "../../static/sass/global.scss";
 import { trimArticle, tagSelector } from "../../utils/helpers";
 
 const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
@@ -10,12 +9,12 @@ harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
 const Article = ({ name, tag, title }) => {
   return (
     <Fragment>
-      <Link as={`/p/${title}`} href={`/article/?${title}`}>
+      <Link href={`/article?${title}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo"> Testing Actions in NGRX Store </div>
             <p>{trimArticle(art, 100)}</p>
-            <div className="footer  flex">
+            <div className="footer flex">
               {tagSelector(tag, "img")}
               <span> Dec 19, 2018</span>
             </div>

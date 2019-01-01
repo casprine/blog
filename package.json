@@ -1,23 +1,27 @@
 {
-  "name": "my-app",
+  "name": "blog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-css": "^1.0.1",
     "express": "^4.16.4",
     "next": "^7.0.2",
     "next-manifest": "^1.6.0",
     "node-sass": "^4.10.0",
     "prismjs": "^1.15.0",
+    "processmd": "^4.4.0",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "sass-loader": "7.1.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "next build",
+    "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
+    "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
+    "dev": "npm run content && node server.js",
     "export": "next export",
-    "prod": "NODE_ENV=production node server.js"
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"

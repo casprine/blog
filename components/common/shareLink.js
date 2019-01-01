@@ -9,7 +9,7 @@ const ShareLink = () => {
           <div className="wrapper  flex">
             <span className="icon">
               <svg
-                class="svg"
+                className="svg"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 stroke-linejoin="round"

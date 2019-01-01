@@ -5,9 +5,26 @@ const Logo = () => (
   <Fragment>
     <Link href="/">
       <div className="ca-logo center">
-        <div> C </div>
+        <div className="symbol"> C </div>
       </div>
     </Link>
+    <style jsx>
+      {`
+        .ca-logo {
+          margin-right: auto;
+          width: 40px;
+          height: 40px;
+          border: 2px solid #071e3d;
+          cursor: pointer;
+          background: white;
+          transition: 0.3s ease-in-out;
+        }
+
+        .symbol {
+          font-size: 20px;
+        }
+      `}
+    </style>
   </Fragment>
 );
 

@@ -16,13 +16,19 @@ app
       app.render(req, res, nextJsPage, queryParams);
     });
 
+    server.get("/article/:id", (req, res) => {
+      const nextJsPage = "/article";
+      const queryParams = { slug: req.params.slug };
+      app.render(req, res, nextJsPage, queryParams);
+    });
+
     server.get("*", (req, res) => {
       return handle(req, res);
     });
 
     server.listen(4000, err => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
+      console.log("> Ready on http://localhost:4000");
     });
   })
   .catch(ex => {

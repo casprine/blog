@@ -6,8 +6,6 @@ import { ArticleCard } from "../components/article/index";
 import { Navbar, Footer, Pagination } from "../components/navigation/index";
 import data from "../data.json";
 
-import "../static/sass/global.scss";
-
 class Index extends Component {
   // componentDidMount = () => {
   //   if ("serviceWorker" in navigator) {

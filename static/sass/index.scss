@@ -1,3 +1,7 @@
+@import "./global.scss";
+@import "./prism.scss";
+@import "./_variables";
+
 $primary: #071e3d;
 $secondary: #eaa81b;
 $grey: hsl(0, 0%, 27%);
@@ -5,15 +9,6 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 // Header styling
-
-.navbar {
-  padding-bottom: 40px;
-  .ca-routes {
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-  }
-}
 
 .footer {
   .ca-routes {
@@ -24,23 +19,6 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 }
 
 // Logo styling
-.ca-logo {
-  margin-right: auto;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #071e3d;
-  cursor: pointer;
-  background: white;
-  transition: 0.3s ease-in-out;
-  &:hover {
-    border: 2px solid $secondary;
-    color: $secondary;
-  }
-
-  div {
-    font-size: 20px;
-  }
-}
 
 .link {
   padding-bottom: 8px;

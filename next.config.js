@@ -1,29 +1,18 @@
-const withSass = require("@zeit/next-sass");
-// const withManifest = require("next-manifest");
+// ❤ https://github.com/zeit/next.js/issues/5750#issuecomment-442313585
+const { PHASE_PRODUCTION_SERVER } =
+  process.env.NODE_ENV === "development"
+    ? {} // We're never in "production server" phase when in development mode
+    : !process.env.NOW_REGION
+    ? require("next/constants") // Get values from `next` package when building locally
+    : require("next-server/constants"); // Get values from `next-server` package when building on now v2
 
-module.exports = withSass();
+module.exports = (phase, { defaultConfig }) => {
+  if (phase === PHASE_PRODUCTION_SERVER) {
+    // Config used to run in production.
+    return {};
+  }
 
-// module.exports = withManifest({
-//   manifest: {
-//     // all of manifest properties.
-//     // ...manifestProperties,
-//     // if src value is exist, icon image will be generated from src image, and ovwewritten
-//     // icons value exist in the properties. if you want to keep your own icons path? do not pass
-//     // src path to this plugin
-//     icons: {
-//       // source image path, to generate applications icons in 192x192, 512x512 sizes for manifest.
-//       src: "./assets/pwa-icon.png",
-//       // default is true, cache images until the hash value of source image has changed
-//       // if false, generating new icon images while every build time.
-//       cache: true
-//     }
-//   }
-// });
+  const withCSS = require("@zeit/next-css");
 
-// module.exports = {
-//   exportPathMap: function() {
-//     return {
-//       "/": { page: "/" }
-//     };
-//   }
-// };
+  return withCSS();
+};
