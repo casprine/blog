@@ -11,7 +11,6 @@ const Logo = () => (
     <style jsx>
       {`
         .ca-logo {
-          margin-right: auto;
           width: 40px;
           height: 40px;
           border: 2px solid #071e3d;

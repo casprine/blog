@@ -14,21 +14,16 @@ body {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-wrap {
   display: flex;
-  flex-wrap: wrap;
 }
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-.wrap {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -298,7 +293,7 @@ h6 {
 
 // dark theme styling
 .dark {
-  background: black !important;
+  background: black;
   h1,
   h2,
   h3,
@@ -321,19 +316,15 @@ h6 {
   }
 
   .article {
-    outline: 1px solid white;
-    background-color: black;
-
+    background-color: #201c29;
+    box-shadow: 0 0 2rem #000;
+    border-radius: 8px;
     * {
       color: white !important;
     }
   }
 
   .link:hover {
-    border-bottom: 2px solid white;
-  }
-
-  .link-inverse {
     border-bottom: 2px solid white;
   }
 }
@@ -343,3 +334,7 @@ h6 {
     // outline: 1px solid red !important;
   }
 }
+
+// * {
+// //   outline: 1px solid red;
+// // }
