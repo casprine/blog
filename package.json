@@ -7,7 +7,7 @@
     "express": "^4.16.4",
     "next": "^7.0.2",
     "next-manifest": "^1.6.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
     "processmd": "^4.4.0",
     "react": "16.7.0-alpha.0",
@@ -18,6 +18,7 @@
   "scripts": {
     "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
     "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
+    "deploy": "now && now alias && now rm casprinee --safe --yes",
     "dev": "node server.js",
     "export": "next export",
     "build": "next build",

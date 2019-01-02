@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "alias": "casprer.now.sh",
+  "name": "casprinee",
+  "alias": "casprine-blog.now.sh",
   "public": true,
   "builds": [
     { "src": "next.config.js", "use": "@now/next@canary" },
@@ -8,7 +9,7 @@
     { "src": "static/fonts/", "use": "@now/static" }
   ],
   "routes": [
-    {"src": "/p/(?<id>.+)", "dest": "/article?slug=$id"},
-    {"src": "/(.*)", "dest": "/$1"}
+    { "src": "/p/(?<id>.+)", "dest": "/article?slug=$id" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
