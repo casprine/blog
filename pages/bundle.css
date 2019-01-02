@@ -9,20 +9,16 @@ body {
   scroll-behavior: smooth; }
 
 .flex {
-  display: flex; }
-
-.flex-wrap {
   display: flex;
   flex-wrap: wrap; }
+
+.flex-wrap {
+  display: flex; }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
-
-.wrap {
-  display: flex;
   flex-wrap: wrap; }
 
 ul li {
@@ -271,8 +267,6 @@ h6 {
       color: white !important; }
   .dark .link:hover {
     border-bottom: 2px solid white; }
-  .dark .link-inverse {
-    border-bottom: 2px solid white; }
 
 /* PrismJS 1.15.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+jsx+typescript+tsx */
@@ -397,7 +391,24 @@ pre[class*="language-"] {
 .footer .ca-routes {
   width: 30%;
   justify-content: space-between;
-  display: flex; }
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media (max-width: 450px) {
+    .footer .ca-routes {
+      width: 100%;
+      padding: 30px 0 20px 0; }
+      .footer .ca-routes * {
+        margin: 5px; } }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .navbar .ca-routes {
+    width: 100%; }
+  .navbar * {
+    margin: 0; }
 
 .link {
   padding-bottom: 8px;
@@ -407,16 +418,6 @@ pre[class*="language-"] {
   cursor: pointer; }
   .link:hover {
     border-bottom: 2px solid #071e3d; }
-
-.link-inverse {
-  padding-bottom: 8px;
-  border-bottom: 2px solid #071e3d;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  cursor: pointer;
-  display: inline-table; }
-  .link-inverse:hover {
-    border-bottom: 2px solid transparent; }
 
 .active-link {
   border-bottom: 2px solid #071e3d;

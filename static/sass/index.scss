@@ -15,6 +15,30 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     width: 30%;
     justify-content: space-between;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 450px) {
+      width: 100%;
+      padding: 30px 0 20px 0;
+
+      * {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .ca-routes {
+    width: 100%;
+  }
+
+  * {
+    margin: 0;
   }
 }
 
@@ -28,19 +52,6 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   cursor: pointer;
   &:hover {
     border-bottom: 2px solid $primary;
-  }
-}
-
-.link-inverse {
-  padding-bottom: 8px;
-  border-bottom: 2px solid $primary;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  cursor: pointer;
-  display: inline-table;
-
-  &:hover {
-    border-bottom: 2px solid transparent;
   }
 }
 

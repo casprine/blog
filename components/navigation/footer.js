@@ -5,25 +5,39 @@ import { Logo } from "../common/index";
 const Footer = () => (
   <Fragment>
     <nav className="footer padding-bottom center">
-      <Logo />
-      <div className="ca-routes" id="fotter-links">
+      <div className="logo-wrapper">
+        <Logo />
+      </div>
+      <div className="ca-routes">
         <Link href="https://dribbble.com/casprine">
-          <span className="link-inverse white">Dribbble</span>
+          <span className="link white">Dribbble</span>
         </Link>
         <Link href="https://www.uplabs.com/casprine">
-          <span className="link-inverse white">Uplabs</span>
+          <span className="link white">Uplabs</span>
         </Link>
         <Link href="https://www.twitter.com/casprine">
-          <span className="link-inverse white">Twitter</span>
+          <span className="link white">Twitter</span>
         </Link>
         <Link href="https://www.github.com/casprine">
-          <span className="link-inverse white">Github</span>
+          <span className="link white">Github</span>
         </Link>
         <Link to="/writings" className="link-inverse">
-          <span className="link-inverse white">Bookmarked</span>
+          <span className="link white">Bookmarked</span>
         </Link>
       </div>
     </nav>
+
+    <style jsx>{`
+      .logo-wrapper {
+        margin-right: auto;
+      }
+
+      @media (max-width: 450px) {
+        .logo-wrapper {
+          width: 100%;
+        }
+      }
+    `}</style>
   </Fragment>
 );
 
