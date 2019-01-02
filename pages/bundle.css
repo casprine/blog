@@ -247,7 +247,7 @@ h6 {
   margin-right: 40px; }
 
 .dark {
-  background: black !important; }
+  background: black; }
   .dark h1,
   .dark h2,
   .dark h3,
@@ -264,8 +264,9 @@ h6 {
   .dark .icon {
     fill: white !important; }
   .dark .article {
-    outline: 1px solid white;
-    background-color: black; }
+    background-color: #201c29;
+    box-shadow: 0 0 2rem #000;
+    border-radius: 8px; }
     .dark .article * {
       color: white !important; }
   .dark .link:hover {

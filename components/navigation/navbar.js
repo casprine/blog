@@ -8,15 +8,15 @@ const Navbar = () => (
       <Logo />
       <div className="ca-routes">
         <Link href="https://casprine-dev.netlify.com/work">
-          <span className="link white">Work</span>
+          <a className="link white">Work</a>
         </Link>
         <Link href="https://casprine-dev.netlify.com/design">
-          <span
+          <a
             className="link white"
             href="https://casprine-dev.netlify.com/design"
           >
             Design
-          </span>
+          </a>
         </Link>
         <Link href="/bookmark">
           <span className="link white">Bookmarked</span>
