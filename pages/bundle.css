@@ -78,6 +78,9 @@ a {
 
 .tags .tag {
   margin: 10px 20px; }
+  @media (max-width: 450px) {
+    .tags .tag {
+      margin: 10px 0; } }
 
 .article {
   background-color: white; }

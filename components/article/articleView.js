@@ -25,7 +25,7 @@ const ArticleView = props => {
 
       <section className="">
         <h1 className="geo heading"> React Hooks for Dummies</h1>
-        <div className="meta flex outline" style={{ marginTop: "20px" }}>
+        <div className="meta flex" style={{ marginTop: "20px" }}>
           <span>{tagSelector("Javascript", "tag")}</span>
           <span className="bullet white">•</span>
           <span className="date white">Dec 19, 2018</span>
