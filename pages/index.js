@@ -5,28 +5,7 @@ import { Tags, SectionHeader } from "../components/section/index";
 import { ArticleCard } from "../components/article/index";
 import { Navbar, Footer, Pagination } from "../components/navigation/index";
 import data from "../data.json";
-
 class Index extends Component {
-  // componentDidMount = () => {
-  //   if ("serviceWorker" in navigator) {
-  //     window.addEventListener("load", function() {
-  //       navigator.serviceWorker.register("../static/sw.js").then(
-  //         function(registration) {
-  //           // Registration was successful
-  //           console.log(
-  //             "ServiceWorker registration successful with scope: ",
-  //             registration.scope
-  //           );
-  //         },
-  //         function(err) {
-  //           // registration failed :(
-  //           console.log("ServiceWorker registration failed: ", err);
-  //         }
-  //       );
-  //     });
-  //   }
-  // };
-
   render() {
     return (
       <Fragment>
@@ -50,4 +29,11 @@ class Index extends Component {
   }
 }
 
+// Index.getInitialProps = async () => {
+//   // const post = await fetchClient
+//   // .getEntry("waohdj16zpzq")
+//   // .then(entry => console.log(entry))
+//   // .catch(err => console.log(err));
+//   // console.log(post);
+// };
 export default Index;

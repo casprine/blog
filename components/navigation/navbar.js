@@ -8,7 +8,7 @@ const Navbar = () => (
       <div className="logo-wrapper">
         <Logo />
       </div>
-      <div className="ca-routes">
+      {/* <div className="ca-routes">
         <Link href="https://casprine-dev.netlify.com/work">
           <a className="link white">Work</a>
         </Link>
@@ -23,7 +23,7 @@ const Navbar = () => (
         <Link href="/bookmark">
           <span className="link white">Bookmarked</span>
         </Link>
-      </div>
+      </div> */}
       <div className="themeToggler-wrapper">
         <ThemeChanger />
       </div>
@@ -44,23 +44,23 @@ const Navbar = () => (
         justify-content: space-between;
       }
 
-      @media (max-width: 450px) {
-        .themeToggler-wrapper {
-          position: absolute;
-          right: 0;
-          top: 48px;
-          margin-right: 20px;
-        }
+      // @media (max-width: 450px) {
+      //   .themeToggler-wrapper {
+      //     position: absolute;
+      //     right: 0;
+      //     top: 48px;
+      //     margin-right: 20px;
+      //   }
 
-        .logo-wrapper {
-          width: 100%;
-        }
+      //   .logo-wrapper {
+      //     width: 100%;
+      //   }
 
-        .ca-routes {
-          margin-top: 30px;
-          width: 100%;
-        }
-      }
+      //   .ca-routes {
+      //     margin-top: 30px;
+      //     width: 100%;
+      //   }
+      // }
     `}</style>
   </Fragment>
 );

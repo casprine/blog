@@ -4,7 +4,7 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: day()
+    dark: !day()
   };
   switchTheme = () => {
     this.state.dark
