@@ -15,7 +15,7 @@ class Index extends Component {
         <Layout>
           <Navbar />
           <SectionHeader />
-          <Tags />
+          {/* <Tags /> */}
           <div className="articles grid-3">
             {data.map((post, i) => {
               return <ArticleCard {...post} key={i} />;
