@@ -1,19 +1,16 @@
 import React, { Fragment } from "react";
 import { Colors } from "../common/index";
 import Link from "next/link";
-import { trimArticle, tagSelector } from "../../utils/helpers";
+import { trimArticle, tagSelector, slugify } from "../../utils/helpers";
 
-const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
-
-const Article = ({ title, tag }) => {
+const Article = ({ title, tag, summary }) => {
   return (
     <Fragment>
-      <Link href={`/article?${title}`} as={`/p/${title}`}>
+      <Link href={`/article?${slugify(title)}`} as={`/p/${slugify(title)}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo">{title}</div>
-            <p>{trimArticle(art, 100)}</p>
+            <p>{trimArticle(summary, 100)}</p>
             <div className="footer flex">
               {tagSelector(tag, "img")}
               <span> Dec 19, 2018</span>
