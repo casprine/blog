@@ -1,11 +1,11 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import Prism from "prismjs";
 import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
 
 const ArticleView = props => {
-  const [saved, setStatus] = useState(false);
+  // const [saved, setStatus] = useState(false);
 
   // function saveArticle() {
   //   return saved ? setStatus(false) : setStatus(true);

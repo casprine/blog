@@ -1,6 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
-import { ContextProvider } from "../context/index.js";
+import { ContextProvider } from "../src/context/index.js";
 import "./bundle.css";
 
 class MyApp extends App {

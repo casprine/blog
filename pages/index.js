@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import Head from "next/head";
-import { Layout } from "../components/common/index";
-import { Tags, SectionHeader } from "../components/section/index";
-import { ArticleCard } from "../components/article/index";
-import { Navbar, Footer } from "../components/navigation/index";
+import { Layout } from "../src/components/common/index";
+import { SectionHeader } from "../src/components/section/index";
+import { ArticleCard } from "../src/components/article/index";
+import { Navbar, Footer } from "../src/components/navigation/index";
 import data from "../data.json";
 class Index extends Component {
   render() {
