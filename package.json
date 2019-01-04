@@ -18,7 +18,6 @@
     "sass-loader": "7.1.0"
   },
   "scripts": {
-    "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
     "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
     "deploy": "now rm casprinee --safe --yes && now && now alias",
     "dev": "node server.js",

@@ -33,3 +33,9 @@ out
 # Sass local stuff
 static/sass/.sass-cache
 static/sass/bundle.css.map
+pages/bundle.css.map
+
+
+
+#content 
+content
