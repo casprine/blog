@@ -7,9 +7,9 @@ import { tagSelector } from "../../utils/helpers";
 const ArticleView = props => {
   const [saved, setStatus] = useState(false);
 
-  function saveArticle() {
-    return saved ? setStatus(false) : setStatus(true);
-  }
+  // function saveArticle() {
+  //   return saved ? setStatus(false) : setStatus(true);
+  // }
 
   useEffect(() => {
     Prism.highlightAll();
@@ -25,11 +25,11 @@ const ArticleView = props => {
 
       <section className="">
         <h1 className="geo heading"> React Hooks for Dummies</h1>
-        <div className="meta flex" style={{ marginTop: "20px" }}>
-          {tagSelector("Javascript", "tag")}
+        <div className="meta flex outline" style={{ marginTop: "20px" }}>
+          <span>{tagSelector("Javascript", "tag")}</span>
           <span className="bullet white">•</span>
           <span className="date white">Dec 19, 2018</span>
-          <span className="bullet white">•</span>
+          {/* <span className="bullet white">•</span>
           <span className="flex" onClick={() => saveArticle()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const ArticleView = props => {
             <span className="pointer white">
               {saved ? " Remove from bookmark" : " Save Article"}
             </span>
-          </span>
+          </span> */}
         </div>
 
         <article className="summary  geo">
