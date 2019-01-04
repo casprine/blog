@@ -6,13 +6,13 @@ import { trimArticle, tagSelector } from "../../utils/helpers";
 const art = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
 harum saepe, sapiente nisi quisquam quia in commodi iusto nequex`;
 
-const Article = ({ name, tag, title }) => {
+const Article = ({ title, tag }) => {
   return (
     <Fragment>
       <Link href={`/article?${title}`} as={`/p/${title}`}>
         <article className="article">
           <div className="wrapper">
-            <div className="heading geo"> Testing Actions in NGRX Store </div>
+            <div className="heading geo"> React for Dummies</div>
             <p>{trimArticle(art, 100)}</p>
             <div className="footer flex">
               {tagSelector(tag, "img")}

@@ -21,9 +21,9 @@ const Footer = () => (
         <Link href="https://www.github.com/casprine">
           <span className="link white">Github</span>
         </Link>
-        <Link to="/writings" className="link-inverse">
+        {/* <Link to="/writings" className="link-inverse">
           <span className="link white">Bookmarked</span>
-        </Link>
+        </Link> */}
       </div>
     </nav>
 
@@ -35,6 +35,7 @@ const Footer = () => (
       @media (max-width: 450px) {
         .logo-wrapper {
           width: 100%;
+          margin-top: 20px;
         }
       }
     `}</style>

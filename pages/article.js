@@ -14,7 +14,7 @@ export default withRouter(props => {
       </Head>
       <Layout>
         <Navbar />
-        <Tags />
+        {/* <Tags /> */}
         <ArticleView />
         <Footer />
       </Layout>
