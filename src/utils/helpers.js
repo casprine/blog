@@ -32,7 +32,7 @@ function checker(language) {
 }
 
 export function tagSelector(language, type) {
-  const serialized = language.toString();
+  const serialized = language;
   const tag = checker(serialized);
   if (type === "tag") {
     return <ViewTag {...tag} />;

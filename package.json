@@ -12,17 +12,19 @@
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
     "processmd": "^4.4.0",
+    "gulp": "^4.0.0",
+    "gulp-json-concat": "^0.1.1",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.1.1",
     "sass-loader": "7.1.0"
   },
   "scripts": {
-    "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
     "deploy": "now rm casprinee --safe --yes && now && now alias",
     "dev": "node server.js",
     "export": "next export",
     "build": "next build",
+    "build-content": "processmd content/*.md --stdout --outputDir posts > summary.json",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {

@@ -39,3 +39,5 @@ pages/bundle.css.map
 
 #content 
 content
+posts
+gulpfile.js

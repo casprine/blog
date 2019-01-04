@@ -12,7 +12,7 @@ const Article = ({ title, tag }) => {
       <Link href={`/article?${title}`} as={`/p/${title}`}>
         <article className="article">
           <div className="wrapper">
-            <div className="heading geo"> React for Dummies</div>
+            <div className="heading geo">{title}</div>
             <p>{trimArticle(art, 100)}</p>
             <div className="footer flex">
               {tagSelector(tag, "img")}
