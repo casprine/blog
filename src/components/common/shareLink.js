@@ -77,9 +77,9 @@ const ShareIt = () => {
   return (
     <Fragment>
       <div className="share">
-        <h1> Love the Article? Spread it</h1>
+        <h1> Love the Article ? Spread it</h1>
         <p>
-          <span> Love the Article? Let it reach others </span>
+          <span> Love the Article ? Let it reach others </span>
           <span role="img" aria-label="smiley">
             😊
           </span>
