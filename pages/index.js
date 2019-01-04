@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Layout } from "../components/common/index";
 import { Tags, SectionHeader } from "../components/section/index";
 import { ArticleCard } from "../components/article/index";
-import { Navbar, Footer, Pagination } from "../components/navigation/index";
+import { Navbar, Footer } from "../components/navigation/index";
 import data from "../data.json";
 class Index extends Component {
   render() {
@@ -21,19 +21,10 @@ class Index extends Component {
               return <ArticleCard {...post} key={i} />;
             })}
           </div>
-          <Pagination />
           <Footer />
         </Layout>
       </Fragment>
     );
   }
 }
-
-// Index.getInitialProps = async () => {
-//   // const post = await fetchClient
-//   // .getEntry("waohdj16zpzq")
-//   // .then(entry => console.log(entry))
-//   // .catch(err => console.log(err));
-//   // console.log(post);
-// };
 export default Index;
