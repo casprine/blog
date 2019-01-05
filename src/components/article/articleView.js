@@ -3,6 +3,7 @@ import Prism from "prismjs";
 import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
+import snarkdown from "snarkdown";
 
 const ArticleView = props => {
   const { title, summary, date, tag, bodyHtml: content } = props[0];
@@ -16,11 +17,6 @@ const ArticleView = props => {
   useEffect(() => {
     Prism.highlightAll();
   });
-
-  function createMarkup() {
-    // console.log(typeof content);
-    return { __html: { content } };
-  }
 
   return (
     <Fragment>
@@ -53,13 +49,7 @@ const ArticleView = props => {
           <p>{summary}</p>
         </article>
 
-        <article className="main">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(content, null, 2)
-            }}
-          />
-        </article>
+        <article className="main" />
         <ShareIt />
       </section>
 
