@@ -22,7 +22,7 @@ export function day() {
 /**
 A function that return the type of tag to use.
 @param {String} langugae - the name of the language
-@param {String || Boolean} type - the type of tag to return 
+@param {String || Boolean} type - the type of tag to return
 */
 function checker(language) {
   const tag = tags.filter(tag => {
@@ -39,4 +39,15 @@ export function tagSelector(language, type) {
   } else if (type === "img") {
     return <TagImage {...tag} />;
   }
+}
+
+export function slugify(str) {
+  return str
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
 }

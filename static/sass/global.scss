@@ -12,6 +12,10 @@ body {
   scroll-behavior: smooth;
 }
 
+* {
+  // outline: 1px solid red;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -295,7 +299,9 @@ h6 {
 }
 
 // dark theme styling
+
 .dark {
+  min-height: 100vh !important;
   background: black;
   h1,
   h2,

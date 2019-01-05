@@ -4,8 +4,9 @@
   "private": true,
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "contentful": "^7.0.5",
     "express": "^4.16.4",
+    "gulp": "^4.0.0",
+    "gulp-json-concat": "^0.1.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "next-manifest": "^1.6.0",
@@ -18,12 +19,11 @@
     "sass-loader": "7.1.0"
   },
   "scripts": {
-    "netlify": "npm run build && npm run export && cp _redirects out/_redirects",
-    "sass": "sass ./static/sass/index.scss  ./page/bundle.css",
     "deploy": "now rm casprinee --safe --yes && now && now alias",
     "dev": "node server.js",
     "export": "next export",
     "build": "next build",
+    "build-content": "processmd content/*.md --stdout --outputDir posts && gulp json",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {
