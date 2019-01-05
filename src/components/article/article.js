@@ -13,7 +13,7 @@ const Article = ({ title, tag, summary, date }) => {
             <div className="heading geo">{title}</div>
             <p>{trimArticle(summary, 100)}</p>
             <div className="footer flex">
-              {/* {tagSelector(tag, "img")} */}
+              {tagSelector(tag, "img")}
               <span> {date}</span>
             </div>
           </div>

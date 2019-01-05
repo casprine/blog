@@ -5,9 +5,8 @@ import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
 
 const ArticleView = props => {
-  const { title, summary, date, tag, bodyContent: content } = props[0];
-  console.log(content);
-
+  const { title, summary, date, tag, bodyHtml: content } = props[0];
+  console.log(JSON.stringify(props[0], null, 2));
   // const [saved, setStatus] = useState(false);
 
   // function saveArticle() {
@@ -19,7 +18,7 @@ const ArticleView = props => {
   });
 
   function createMarkup() {
-    // const stringData = JSON.parse(contentn)
+    // console.log(typeof content);
     return { __html: { content } };
   }
 
@@ -54,8 +53,13 @@ const ArticleView = props => {
           <p>{summary}</p>
         </article>
 
-        <div dangerouslySetInnerHTML={createMarkup()} />
-
+        <article className="main">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(content, null, 2)
+            }}
+          />
+        </article>
         <ShareIt />
       </section>
 

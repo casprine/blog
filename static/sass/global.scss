@@ -12,6 +12,10 @@ body {
   scroll-behavior: smooth;
 }
 
+* {
+  // outline: 1px solid red;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
