@@ -5,6 +5,7 @@ import { ArticleView } from "../src/components/article/index";
 import { Footer, Navbar } from "../src/components/navigation/index";
 import Head from "next/head";
 import { ContextConsumer } from "../src/context/index";
+import { slugify } from "../src/utils/helpers";
 
 export default withRouter(props => {
   console.log(props.router.query.id);
@@ -20,7 +21,7 @@ export default withRouter(props => {
         <ContextConsumer>
           {({ articles }) => {
             const article = articles.filter(article => {
-              return article.title === props.router.query.id;
+              return slugify(article.title) === props.router.query.id;
             });
             return <ArticleView {...article} />;
           }}
