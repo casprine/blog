@@ -3,7 +3,7 @@ import { Colors } from "../common/index";
 import Link from "next/link";
 import { trimArticle, tagSelector, slugify } from "../../utils/helpers";
 
-const Article = ({ title, tag, summary, date, id }) => {
+const Article = ({ title, tag, summary, date }) => {
   const slugifiedTitle = slugify(title);
   return (
     <Fragment>

@@ -5,9 +5,9 @@ import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
 
 const ArticleView = props => {
-  console.log(props, "hellll");
-  const { title, summary, date, tag } = props[0];
-  console.log(props, title);
+  const { title, summary, date, tag, bodyContent: content } = props[0];
+  console.log(content);
+
   // const [saved, setStatus] = useState(false);
 
   // function saveArticle() {
@@ -17,6 +17,11 @@ const ArticleView = props => {
   useEffect(() => {
     Prism.highlightAll();
   });
+
+  function createMarkup() {
+    // const stringData = JSON.parse(contentn)
+    return { __html: { content } };
+  }
 
   return (
     <Fragment>
@@ -49,65 +54,7 @@ const ArticleView = props => {
           <p>{summary}</p>
         </article>
 
-        <article className="main">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum
-            consectetur quae perspiciatis corporis praesentium sapiente. Natus
-            quaerat beatae at voluptatibus architecto fuga excepturi maxime,
-            quia praesentium iste accusamus cumque. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Incidunt ea eaque alias ipsa! Tenetur
-            cupiditate nam reprehenderit animi excepturi laboriosam delectus
-            atque vitae nobis! Nulla odio maiores velit explicabo maxime. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
-            officia cum doloribus praesentium maxime repudiandae, repellat,
-            officiis, reiciendis neque illo. Illum voluptates distinctio nisi
-            eveniet omnis corporis nulla accusantium.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum
-            consectetur quae perspiciatis corporis praesentium sapiente. Natus
-            quaerat beatae at voluptatibus architecto fuga excepturi maxime,
-            quia praesentium iste accusamus cumque. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Incidunt ea eaque alias ipsa! Tenetur
-            cupiditate nam reprehenderit animi excepturi laboriosam delectus
-            atque vitae nobis! Nulla odio maiores velit explicabo maxime. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
-            officia cum doloribus praesentium maxime repudiandae, repellat,
-            officiis, reiciendis neque illo. Illum voluptates distinctio nisi
-            eveniet omnis corporis nulla accusantium.
-          </p>
-
-          <pre>
-            <code className="language-javascript">
-              {`
-             const ArticleView = props => {
-              const [saved, setStatus] = useState(false);
-              function saveArticle() {
-                return saved ? setStatus(false) : setStatus(true);
-              }
-              useEffect(() => {
-                Prism.highlightAll(yea);
-              });
-            }
-                  `}
-            </code>
-          </pre>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum
-            consectetur quae perspiciatis corporis praesentium sapiente. Natus
-            quaerat beatae at voluptatibus architecto fuga excepturi maxime,
-            quia praesentium iste accusamus cumque. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Incidunt ea eaque alias ipsa! Tenetur
-            cupiditate nam reprehenderit animi excepturi laboriosam delectus
-            atque vitae nobis! Nulla odio maiores velit explicabo maxime. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad
-            officia cum doloribus praesentium maxime repudiandae, repellat,
-            officiis, reiciendis neque illo. Illum voluptates distinctio nisi
-            eveniet omnis corporis nulla accusantium.
-          </p>
-        </article>
+        <div dangerouslySetInnerHTML={createMarkup()} />
 
         <ShareIt />
       </section>

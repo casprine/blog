@@ -7,6 +7,7 @@ import Head from "next/head";
 import { ContextConsumer } from "../src/context/index";
 
 export default withRouter(props => {
+  console.log(props.router.query.id);
   return (
     <Fragment>
       <Head>
@@ -21,7 +22,6 @@ export default withRouter(props => {
             const article = articles.filter(article => {
               return article.title === props.router.query.id;
             });
-            console.log(article, "article");
             return <ArticleView {...article} />;
           }}
         </ContextConsumer>
