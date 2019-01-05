@@ -246,6 +246,7 @@ h6 {
   margin-right: 40px; }
 
 .dark {
+  min-height: 100vh !important;
   background: black; }
   .dark h1,
   .dark h2,

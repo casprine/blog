@@ -15,8 +15,6 @@ const ArticleView = props => {
     Prism.highlightAll();
   });
 
-  console.log(props);
-
   return (
     <Fragment>
       <Head>

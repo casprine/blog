@@ -3,10 +3,14 @@ import { Colors } from "../common/index";
 import Link from "next/link";
 import { trimArticle, tagSelector, slugify } from "../../utils/helpers";
 
-const Article = ({ title, tag, summary }) => {
+const Article = ({ title, tag, summary, date }) => {
+  const slugifiedTitle = slugify(title);
+
+  console.log(date);
+
   return (
     <Fragment>
-      <Link href={`/article?${slugify(title)}`} as={`/p/${slugify(title)}`}>
+      <Link href={`/article?${slugifiedTitle}`} as={`/p/${slugifiedTitle}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo">{title}</div>

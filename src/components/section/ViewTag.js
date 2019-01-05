@@ -3,6 +3,7 @@ import { Colors } from "../common/index";
 
 const ViewTag = props => {
   const { url, name } = props[0];
+  console.log(url, name);
   return (
     <Fragment>
       <div className="flex tag">

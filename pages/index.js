@@ -10,7 +10,6 @@ class Index extends Component {
     articles: null
   };
   componentWillMount() {
-    console.log(Object.values(data));
     const posts = Object.values(data);
     this.setState({
       articles: posts

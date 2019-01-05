@@ -22,17 +22,18 @@ export function day() {
 /**
 A function that return the type of tag to use.
 @param {String} langugae - the name of the language
-@param {String || Boolean} type - the type of tag to return 
+@param {String || Boolean} type - the type of tag to return
 */
 function checker(language) {
   const tag = tags.filter(tag => {
     return tag.name === language;
   });
+  console.log(tag);
   return tag;
 }
 
 export function tagSelector(language, type) {
-  const serialized = language;
+  const serialized = language.toString();
   const tag = checker(serialized);
   if (type === "tag") {
     return <ViewTag {...tag} />;
