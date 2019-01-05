@@ -5,6 +5,9 @@ import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
 
 const ArticleView = props => {
+  console.log(props, "hellll");
+  const { title, summary, date, tag } = props[0];
+  console.log(props, title);
   // const [saved, setStatus] = useState(false);
 
   // function saveArticle() {
@@ -18,15 +21,15 @@ const ArticleView = props => {
   return (
     <Fragment>
       <Head>
-        <title> React Hooks for Dummies </title>
+        <title>{title}</title>
       </Head>
 
       <section className="">
-        <h1 className="geo heading"> React Hooks for Dummies</h1>
+        <h1 className="geo heading"> {title}</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
-          <span>{tagSelector("Javascript", "tag")}</span>
+          <span>{tagSelector(tag, "tag")}</span>
           <span className="bullet white">•</span>
-          <span className="date white">Dec 19, 2018</span>
+          <span className="date white">{date}</span>
           {/* <span className="bullet white">•</span>
           <span className="flex" onClick={() => saveArticle()}>
             <svg
@@ -43,12 +46,7 @@ const ArticleView = props => {
         </div>
 
         <article className="summary  geo">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            veniam, alias voluptas sunt corrupti sed expedita animi quaerat
-            accusamus dolorum soluta aliquam maiores possimus perferendis
-            consequatur asperiores repellendus pariatur fugiat.
-          </p>
+          <p>{summary}</p>
         </article>
 
         <article className="main">

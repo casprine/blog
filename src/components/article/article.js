@@ -3,21 +3,18 @@ import { Colors } from "../common/index";
 import Link from "next/link";
 import { trimArticle, tagSelector, slugify } from "../../utils/helpers";
 
-const Article = ({ title, tag, summary, date }) => {
+const Article = ({ title, tag, summary, date, id }) => {
   const slugifiedTitle = slugify(title);
-
-  console.log(date);
-
   return (
     <Fragment>
-      <Link href={`/article?${slugifiedTitle}`} as={`/p/${slugifiedTitle}`}>
+      <Link as={`/p/${slugifiedTitle}`} href={`/article?id=${title}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo">{title}</div>
             <p>{trimArticle(summary, 100)}</p>
             <div className="footer flex">
-              {tagSelector(tag, "img")}
-              <span> Dec 19, 2018</span>
+              {/* {tagSelector(tag, "img")} */}
+              <span> {date}</span>
             </div>
           </div>
         </article>
@@ -28,7 +25,7 @@ const Article = ({ title, tag, summary, date }) => {
           cursor: pointer;
           box-shadow: 0 1px 3px 0 rgba(38, 41, 58, 0.06);
           border-radius: 3px;
-          padding: 10px 0;
+          ]padding: 10px 0;
           transition: 0.3s ease-out;
         }
 

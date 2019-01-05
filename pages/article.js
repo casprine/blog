@@ -4,6 +4,7 @@ import { Layout } from "../src/components/common/index";
 import { ArticleView } from "../src/components/article/index";
 import { Footer, Navbar } from "../src/components/navigation/index";
 import Head from "next/head";
+import { ContextConsumer } from "../src/context/index";
 
 export default withRouter(props => {
   return (
@@ -14,7 +15,16 @@ export default withRouter(props => {
       <Layout>
         <Navbar />
         {/* <Tags /> */}
-        <ArticleView />
+
+        <ContextConsumer>
+          {({ articles }) => {
+            const article = articles.filter(article => {
+              return article.title === props.router.query.id;
+            });
+            console.log(article, "article");
+            return <ArticleView {...article} />;
+          }}
+        </ContextConsumer>
         <Footer />
       </Layout>
     </Fragment>

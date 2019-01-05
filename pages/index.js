@@ -4,18 +4,9 @@ import { Layout } from "../src/components/common/index";
 import { SectionHeader } from "../src/components/section/index";
 import { ArticleCard } from "../src/components/article/index";
 import { Navbar, Footer } from "../src/components/navigation/index";
-import data from "../posts.json";
-class Index extends Component {
-  state = {
-    articles: null
-  };
-  componentWillMount() {
-    const posts = Object.values(data);
-    this.setState({
-      articles: posts
-    });
-  }
+import { ContextConsumer } from "../src/context/index";
 
+class Index extends Component {
   render() {
     return (
       <Fragment>
@@ -26,11 +17,18 @@ class Index extends Component {
           <Navbar />
           <SectionHeader />
           {/* <Tags /> */}
-          <div className="articles grid-3">
-            {this.state.articles.map((post, i) => {
-              return <ArticleCard {...post} key={i} />;
-            })}
-          </div>
+          <ContextConsumer>
+            {({ articles }) => {
+              // console.log(JSON.stringify(articles, null, 2));
+              return (
+                <div className="articles grid-3">
+                  {articles.map((post, i) => {
+                    return <ArticleCard {...post} key={i} />;
+                  })}
+                </div>
+              );
+            }}
+          </ContextConsumer>
           <Footer />
         </Layout>
       </Fragment>

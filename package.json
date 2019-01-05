@@ -23,7 +23,7 @@
     "dev": "node server.js",
     "export": "next export",
     "build": "next build",
-    "build-content": "processmd content/*.md --stdout --outputDir posts",
+    "build-content": "processmd content/*.md --stdout --outputDir posts && gulp json",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {

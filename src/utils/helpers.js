@@ -28,7 +28,6 @@ function checker(language) {
   const tag = tags.filter(tag => {
     return tag.name === language;
   });
-  console.log(tag);
   return tag;
 }
 
