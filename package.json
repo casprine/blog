@@ -16,8 +16,7 @@
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.1.1",
-    "sass-loader": "7.1.0",
-    "snarkdown": "^1.2.2"
+    "sass-loader": "7.1.0"
   },
   "scripts": {
     "deploy": "now rm casprinee --safe --yes && now && now alias",

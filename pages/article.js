@@ -7,7 +7,6 @@ import Head from "next/head";
 import { ContextConsumer } from "../src/context/index";
 
 export default withRouter(props => {
-  console.log(props.router.query.id);
   return (
     <Fragment>
       <Head>

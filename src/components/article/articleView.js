@@ -3,17 +3,14 @@ import Prism from "prismjs";
 import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
-import snarkdown from "snarkdown";
 
 const ArticleView = props => {
-  const { title, summary, date, tag, bodyHtml: content } = props[0];
-  console.log(JSON.stringify(props[0], null, 2));
+  const { title, summary, date, tag, bodyContent: content } = props[0];
   // const [saved, setStatus] = useState(false);
 
   // function saveArticle() {
   //   return saved ? setStatus(false) : setStatus(true);
   // }
-
   useEffect(() => {
     Prism.highlightAll();
   });
@@ -49,7 +46,10 @@ const ArticleView = props => {
           <p>{summary}</p>
         </article>
 
-        <article className="main" />
+        <article
+          className="main"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
         <ShareIt />
       </section>
 
@@ -78,6 +78,10 @@ const ArticleView = props => {
 
         span {
           margin: auto 0;
+        }
+
+        p {
+          outline: 1px solid red;
         }
 
         .bullet {
