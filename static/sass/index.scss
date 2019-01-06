@@ -1,5 +1,5 @@
 @import "./global.scss";
-@import "./prism.scss";
+@import "./syntax.scss";
 @import "./_variables";
 
 $primary: #071e3d;
@@ -9,6 +9,14 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 // Header styling
+
+* {
+  // outline: 1px solid red;
+
+  pre {
+    // margin: 10px;
+  }
+}
 
 .footer {
   .ca-routes {

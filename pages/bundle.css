@@ -4,8 +4,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #071e3d;
-  background-color: #e6edf1;
   scroll-behavior: smooth; }
 
 .flex {
@@ -87,6 +85,13 @@ a {
 
 .pointer {
   cursor: pointer; }
+
+.main p {
+  margin-top: 30px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: rgba(5, 6, 10, 0.8);
+  line-height: 35px; }
 
 h1,
 h2,
@@ -246,7 +251,6 @@ h6 {
   margin-right: 40px; }
 
 .dark {
-  min-height: 100vh !important;
   background: black; }
   .dark h1,
   .dark h2,
@@ -272,125 +276,219 @@ h6 {
   .dark .link:hover {
     border-bottom: 2px solid white; }
 
-/* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+jsx+typescript+tsx */
-/**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #ccc;
-  background: none;
-  font-family: Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  text-align: left;
-  font-size: 18px;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none; }
+.light {
+  color: #071e3d;
+  background-color: #e6edf1; }
 
 pre {
-  min-width: inherit;
-  position: relative;
-  z-index: 1;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 20px 68px; }
 
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 50px 0;
+pre.ft-syntax-highlight {
+  display: block;
+  position: relative;
+  padding: 30px !important;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: lightgrey;
+  background-color: #0f111a; }
+
+pre.ft-syntax-highlight::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-indent: 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 0.8px;
+  content: attr(data-syntax);
+  direction: rtl; }
+
+pre.ft-syntax-highlight code {
+  counter-reset: line -1;
+  font-family: Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  display: block;
+  margin: -25px 0 -28px;
+  padding: 0 10px 10px 0;
+  max-height: 400px;
   overflow: auto; }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #0f111a; }
+pre.ft-syntax-highlight code span.newline::before {
+  position: relative;
+  right: 20px;
+  color: lightgrey;
+  counter-increment: line;
+  content: counter(line);
+  font-weight: 200; }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal; }
+pre.ft-syntax-highlight code span.newline:nth-of-type(1n + 11)::before {
+  position: relative;
+  right: 28px; }
 
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #999;
-  outline: 1px solid green; }
+pre.ft-syntax-highlight code span.newline:nth-of-type(1n + 101)::before {
+  position: relative;
+  right: 36px; }
 
-.token.punctuation {
-  color: #ccc;
-  padding: 3px; }
+@media all and (max-width: 550px) {
+  pre.ft-syntax-highlight {
+    /*this ensures a minimum font size of 9px is maintained
+    when viewport is less than 550px
+    calculating against vw gives it a responsive feel*/
+    font-size: calc(9px + 0.8vw); } }
+@media all and (max-width: 225px) {
+  pre.ft-syntax-highlight[data-ui-theme="macosx" i]::before {
+    text-align: left;
+    text-indent: 55%; }
 
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-  color: pink; }
+  pre.ft-syntax-highlight[data-ui-theme="win95" i]::after {
+    display: none; } }
+/* scrollbar customizations (not applicable to all browsers) */
+pre.ft-syntax-highlight code::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); }
 
-.token.function-name {
-  color: white; }
+pre.ft-syntax-highlight code::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4); }
 
-.token,
-.token.number,
-.token {
-  color: #82aaff; }
+pre.ft-syntax-highlight code::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.5); }
 
-.boolean {
-  color: #f78c6c; }
+pre.ft-syntax-highlight code::-webkit-scrollbar-corner {
+  display: none; }
 
-.function {
-  color: #82aaff; }
+pre.ft-syntax-highlight[data-ui-theme="bootstrap4"]
+code::-webkit-scrollbar-thumb,
+pre.ft-syntax-highlight[data-ui-theme="burberry"] code::-webkit-scrollbar-thumb,
+pre.ft-syntax-highlight[data-ui-theme="light"] code::-webkit-scrollbar-thumb,
+pre.ft-syntax-highlight[data-ui-theme="simple"] code::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4); }
 
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-  color: #82aaff; }
+pre.ft-syntax-highlight[data-ui-theme="bootstrap4"] code::-webkit-scrollbar,
+pre.ft-syntax-highlight[data-ui-theme="burberry"] code::-webkit-scrollbar,
+pre.ft-syntax-highlight[data-ui-theme="light"] code::-webkit-scrollbar,
+pre.ft-syntax-highlight[data-ui-theme="simple"] code::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.4); }
 
-.token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-  color: #c792ea; }
+/*    => syntax theme: one-dark*/
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.boolean,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-constant,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-enum,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-structure,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.null,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.unit {
+  color: goldenrod; }
 
-.token.string,
-.token.char,
-.token.attr-value,
-.token.regex,
-.token.variable {
-  color: #82aaff; }
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.identifier,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-function,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-udf {
+  color: #3b94d9; }
 
-.token.operator,
-.token.entity,
-.token.url {
-  color: #b2ccd6; }
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-class,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-sub {
+  color: #f8da7b; }
 
-.token.important,
-.token.bold {
-  font-weight: bold; }
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-native {
+  color: lightseagreen; }
 
-.token.italic {
-  font-style: italic; }
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.object,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.property {
+  color: tomato; }
 
-.token.entity {
-  cursor: help; }
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.keyword,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i]
+code
+span.identifier-namespace {
+  color: #d979c4; }
 
-.token.inserted {
-  color: green; }
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.operand,
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.url {
+  color: MediumTurquoise; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.typecast {
+  color: violet; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-dark" i] code span.variable {
+  color: inherit; }
+
+/*    => syntax theme: one-light */
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.boolean,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-constant,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-enum,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-structure,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.null,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.unit {
+  color: orange; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.identifier,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-function,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-udf {
+  color: #16c07b; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-class,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-sub {
+  color: slateblue; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-native,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.url {
+  color: #6bbcff; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.object,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.property {
+  color: tan; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.keyword,
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i]
+code
+span.identifier-namespace {
+  color: #de6f5b; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.operand {
+  color: MediumTurquoise; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.typecast {
+  color: violet; }
+
+pre.ft-syntax-highlight[data-syntax-theme="one-light" i] code span.variable {
+  color: inherit; }
 
 .footer .ca-routes {
   width: 30%;

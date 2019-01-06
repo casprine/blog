@@ -1,31 +1,33 @@
 import React, { Fragment, useEffect } from "react";
 import Prism from "prismjs";
+
 import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
 
 const ArticleView = props => {
-  const { title, summary, date, tag, bodyHtml: content } = props[0];
-  console.log(JSON.stringify(props[0], null, 2));
+  const { title, summary, date, tag, bodyContent: content } = props[0];
   // const [saved, setStatus] = useState(false);
 
   // function saveArticle() {
   //   return saved ? setStatus(false) : setStatus(true);
   // }
-
   useEffect(() => {
-    Prism.highlightAll();
-  });
+    // Prism.highlightAll();
+    const script = document.createElement("script");
 
-  function createMarkup() {
-    // console.log(typeof content);
-    return { __html: { content } };
-  }
+    script.src =
+      "https://cdn.jsdelivr.net/combine/npm/prismjs@1.15.0/components/index.min.js,npm/prismjs@1.15.0/components/prism-javascript.min.js,npm/prismjs@1.15.0/components/prism-jsx.min.js,npm/prismjs@1.15.0/components/prism-sass.min.js,npm/prismjs@1.15.0/components/prism-scss.min.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  });
 
   return (
     <Fragment>
       <Head>
         <title>{title}</title>
+        {/* <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1/components/index.min.js,npm/prismjs@1/components/prism-javascript.min.js,npm/prismjs@1/components/prism-jsx.min.js,npm/prismjs@1/components/prism-sass.min.js,npm/prismjs@1/components/prism-scss.min.js" /> */}
       </Head>
 
       <section className="">
@@ -53,13 +55,17 @@ const ArticleView = props => {
           <p>{summary}</p>
         </article>
 
-        <article className="main">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(content, null, 2)
-            }}
-          />
-        </article>
+        <article
+          className="main"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "https://cdn.jsdelivr.net/combine/npm/prismjs@1.15.0/components/index.min.js,npm/prismjs@1.15.0/components/prism-javascript.min.js,npm/prismjs@1.15.0/components/prism-jsx.min.js,npm/prismjs@1.15.0/components/prism-sass.min.js,npm/prismjs@1.15.0/components/prism-scss.min.js"
+          }}
+        />
         <ShareIt />
       </section>
 
@@ -89,7 +95,6 @@ const ArticleView = props => {
         span {
           margin: auto 0;
         }
-
         .bullet {
           margin: auto 10px;
         }
