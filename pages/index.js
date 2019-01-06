@@ -12,7 +12,8 @@ class Index extends Component {
       <Fragment>
         <Head>
           <title>Casprine Assempah</title>
-        </Head>
+          
+          </Head>
         <Layout>
           <Navbar />
           <SectionHeader />

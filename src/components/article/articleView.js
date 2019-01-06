@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import Prism from "prismjs";
+
 import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
@@ -19,6 +20,7 @@ const ArticleView = props => {
     <Fragment>
       <Head>
         <title>{title}</title>
+        <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1/components/index.min.js,npm/prismjs@1/components/prism-javascript.min.js,npm/prismjs@1/components/prism-jsx.min.js,npm/prismjs@1/components/prism-sass.min.js,npm/prismjs@1/components/prism-scss.min.js" />
       </Head>
 
       <section className="">
@@ -50,6 +52,13 @@ const ArticleView = props => {
           className="main"
           dangerouslySetInnerHTML={{ __html: content }}
         />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "https://cdn.jsdelivr.net/combine/npm/prismjs@1.15.0/components/index.min.js,npm/prismjs@1.15.0/components/prism-javascript.min.js,npm/prismjs@1.15.0/components/prism-jsx.min.js,npm/prismjs@1.15.0/components/prism-sass.min.js,npm/prismjs@1.15.0/components/prism-scss.min.js"
+          }}
+        />
         <ShareIt />
       </section>
 
@@ -79,11 +88,6 @@ const ArticleView = props => {
         span {
           margin: auto 0;
         }
-
-        p {
-          outline: 1px solid red;
-        }
-
         .bullet {
           margin: auto 10px;
         }
