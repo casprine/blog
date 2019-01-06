@@ -1,10 +1,10 @@
 import React, { Fragment, Component } from "react";
-import { withRouter } from "next/router";
 import { Layout } from "../src/components/common/index";
 import { ArticleView } from "../src/components/article/index";
 import { Footer, Navbar } from "../src/components/navigation/index";
 import Head from "next/head";
 import { ContextConsumer } from "../src/context/index";
+import { withRouter } from "next/router";
 
 // export default withRouter(props => {
 //   return (
@@ -36,6 +36,7 @@ class Article extends Component {
       <Fragment>
         <Head>
           <title>Blog Post</title>
+          {/* <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1/components/index.min.js,npm/prismjs@1/components/prism-javascript.min.js,npm/prismjs@1/components/prism-jsx.min.js,npm/prismjs@1/components/prism-sass.min.js,npm/prismjs@1/components/prism-scss.min.js" /> */}
         </Head>
         <Layout>
           <Navbar />
