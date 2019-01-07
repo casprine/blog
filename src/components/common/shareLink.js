@@ -1,10 +1,15 @@
 import React, { Fragment } from "react";
 import { Colors } from "./index";
+import { env } from "../../utils/helpers";
 
-const ShareLink = () => {
+const ShareLink = props => {
   return (
     <Fragment>
-      <a href="https://twitter.com/intent/tweet?text=Hello%20world">
+      <a
+        href={`https://twitter.com/intent/tweet?text=${
+          props.title
+        }&url=${env.url + "p/" + props.id}`}
+      >
         <div className="share-button ">
           <div className="wrapper  flex">
             <span className="icon">
@@ -73,7 +78,7 @@ const ShareLink = () => {
   );
 };
 
-const ShareIt = () => {
+const ShareIt = props => {
   return (
     <Fragment>
       <div className="share">
@@ -85,7 +90,7 @@ const ShareIt = () => {
           </span>
         </p>
 
-        <ShareLink />
+        <ShareLink {...props} />
       </div>
 
       <style jsx>{`
