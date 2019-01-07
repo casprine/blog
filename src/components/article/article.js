@@ -7,7 +7,7 @@ const Article = ({ title, tag, summary, date }) => {
   const slugifiedTitle = slugify(title);
   return (
     <Fragment>
-      <Link as={`/p/${slugifiedTitle}`} href={`/article?id=${slugifiedTitle}`}>
+      <Link as={`/p/${slugifiedTitle}`} href={`/article?id=${title}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo">{title}</div>
