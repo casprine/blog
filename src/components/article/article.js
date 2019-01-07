@@ -1,13 +1,12 @@
 import React, { Fragment } from "react";
 import { Colors } from "../common/index";
 import Link from "next/link";
-import { trimArticle, tagSelector, slugify } from "../../utils/helpers";
+import { trimArticle, tagSelector } from "../../utils/helpers";
 
-const Article = ({ title, tag, summary, date }) => {
-  const slugifiedTitle = slugify(title);
+const Article = ({ title, tag, summary, date, id }) => {
   return (
     <Fragment>
-      <Link as={`/p/${slugifiedTitle}`} href={`/article?id=${title}`}>
+      <Link as={`/p/${id}`} href={`/article?id=${id}`}>
         <article className="article">
           <div className="wrapper">
             <div className="heading geo">{title}</div>

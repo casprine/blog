@@ -9,6 +9,7 @@ import fetch from "isomorphic-unfetch";
 
 class Article extends Component {
   render() {
+    console.log(this.props);
     return (
       <Fragment>
         <Head>
@@ -17,14 +18,7 @@ class Article extends Component {
         <Layout>
           <Navbar />
           {/* <Tags /> */}
-          <ContextConsumer>
-            {({ articles }) => {
-              const article = articles.filter(article => {
-                return article.title === this.props.router.query.id;
-              });
-              return <ArticleView {...article} />;
-            }}
-          </ContextConsumer>
+          <ArticleView {...this.props.article} />
           <Footer />
         </Layout>
       </Fragment>
@@ -32,4 +26,17 @@ class Article extends Component {
   }
 }
 
+Article.getInitialProps = async function(context) {
+  const { id } = context.query;
+  const res = await fetch("https://api.myjson.com/bins/15ll2w");
+  const json = await res.json();
+  const formattedJson = await Object.values(json);
+  const article = await formattedJson.filter(article => {
+    return article.id === id;
+  });
+
+  return {
+    article: article
+  };
+};
 export default withRouter(Article);

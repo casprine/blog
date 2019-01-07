@@ -13,7 +13,8 @@ app
     server.get("/p/:id", (req, res) => {
       const nextJsPage = "/article";
       const queryParams = { id: req.params.id };
-      app.render(req, res, nextJsPage, queryParams);
+      const mergedQuery = Object.assign({}, req.query, req.params);
+      app.render(req, res, nextJsPage, queryParams, mergedQuery);
     });
 
     server.get("*", (req, res) => {
