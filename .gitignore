@@ -35,7 +35,7 @@ out
 static/sass/.sass-cache
 static/sass/bundle.css.map
 pages/bundle.css.map
-.sass-cache
+.sass-cache/
 
 
 #content 
