@@ -12,15 +12,13 @@ class Index extends Component {
       <Fragment>
         <Head>
           <title>Casprine Assempah</title>
-          
-          </Head>
+        </Head>
         <Layout>
           <Navbar />
           <SectionHeader />
           {/* <Tags /> */}
           <ContextConsumer>
             {({ articles }) => {
-              // console.log(JSON.stringify(articles, null, 2));
               return (
                 <div className="articles grid-3">
                   {articles.map((post, i) => {
