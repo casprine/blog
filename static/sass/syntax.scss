@@ -33,6 +33,10 @@ pre.ft-syntax-highlight::before {
 }
 pre.ft-syntax-highlight code {
   counter-reset: line -1;
+<<<<<<< HEAD
+=======
+  font-family: Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+>>>>>>> parent of 8ffaa80...  minor additions
 
   display: block;
   margin: -25px 0 -28px;
