@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import Head from "next/head";
 import { ShareIt, Colors } from "../common/index";
 import { tagSelector } from "../../utils/helpers";

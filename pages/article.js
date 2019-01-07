@@ -5,10 +5,10 @@ import { Footer, Navbar } from "../src/components/navigation/index";
 import Head from "next/head";
 import { ContextConsumer } from "../src/context/index";
 import { withRouter } from "next/router";
+import fetch from "isomorphic-unfetch";
 
 class Article extends Component {
   render() {
-    console.log(this.props.router.query.id);
     return (
       <Fragment>
         <Head>
