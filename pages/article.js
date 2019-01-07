@@ -2,25 +2,17 @@ import React, { Fragment, Component } from "react";
 import { Layout } from "../src/components/common/index";
 import { ArticleView } from "../src/components/article/index";
 import { Footer, Navbar } from "../src/components/navigation/index";
-import Head from "next/head";
 import { ContextConsumer } from "../src/context/index";
 import { withRouter } from "next/router";
-import fetch from "isomorphic-unfetch";
 
 class Article extends Component {
   state = {
     article: null,
     id: this.props.id
   };
-
-  componentWillMount() {}
-
   render() {
     return (
       <Fragment>
-        <Head>
-          <title>Blog Post</title>
-        </Head>
         <Layout>
           <Navbar />
           {/* <Tags /> */}

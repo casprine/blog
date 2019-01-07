@@ -51,3 +51,7 @@ export function slugify(str) {
     .replace(/^-+/, "")
     .replace(/-+$/, "");
 }
+
+export const env = {
+  url: "https://casprine-blog.now.sh/"
+};
