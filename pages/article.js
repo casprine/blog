@@ -8,8 +8,14 @@ import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 
 class Article extends Component {
+  state = {
+    article: null,
+    id: this.props.id
+  };
+
+  componentWillMount() {}
+
   render() {
-    console.log(this.props);
     return (
       <Fragment>
         <Head>
@@ -18,7 +24,14 @@ class Article extends Component {
         <Layout>
           <Navbar />
           {/* <Tags /> */}
-          <ArticleView {...this.props.article} />
+          <ContextConsumer>
+            {({ articles }) => {
+              const article = articles.filter(article => {
+                return article.id === this.props.id;
+              });
+              return <ArticleView {...article} />;
+            }}
+          </ContextConsumer>
           <Footer />
         </Layout>
       </Fragment>
@@ -28,15 +41,8 @@ class Article extends Component {
 
 Article.getInitialProps = async function(context) {
   const { id } = context.query;
-  const res = await fetch("https://api.myjson.com/bins/15ll2w");
-  const json = await res.json();
-  const formattedJson = await Object.values(json);
-  const article = await formattedJson.filter(article => {
-    return article.id === id;
-  });
-
   return {
-    article: article
+    id: id
   };
 };
 export default withRouter(Article);
