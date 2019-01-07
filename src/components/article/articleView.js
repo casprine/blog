@@ -74,7 +74,7 @@ const ArticleView = props => {
               "https://cdn.jsdelivr.net/combine/npm/prismjs@1.15.0/components/index.min.js,npm/prismjs@1.15.0/components/prism-javascript.min.js,npm/prismjs@1.15.0/components/prism-jsx.min.js,npm/prismjs@1.15.0/components/prism-sass.min.js,npm/prismjs@1.15.0/components/prism-scss.min.js"
           }}
         />
-        <ShareIt />
+        <ShareIt title={title} id={id} />
       </section>
 
       <style jsx>{`
