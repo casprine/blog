@@ -19,12 +19,24 @@ $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 }
 
 .footer {
+  margin-top: auto !important;
   .ca-routes {
     width: 30%;
     justify-content: space-between;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
+    span {
+      padding-bottom: 8px;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: all 200ms ease;
+      transition: all 200ms ease;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 2px solid $primary;
+      }
+    }
 
     @media (max-width: 450px) {
       width: 100%;
