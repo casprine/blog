@@ -15,7 +15,7 @@ const Pagination = () => {
         </div>
       </nav>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         nav {
           margin-bottom: 50px;
           margin-top: 20px;
@@ -32,7 +32,7 @@ const Pagination = () => {
         .right {
           font-size: 17px;
         }
-      `}</style>
+      `}</style> */}
     </Fragment>
   );
 };
