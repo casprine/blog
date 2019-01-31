@@ -16,7 +16,7 @@ const ThemeChanger = () => {
         }}
       </ContextConsumer>
 
-      <style jsx>
+      {/* <style jsx>
         {`
           div {
             margin-left: auto;
@@ -30,7 +30,7 @@ const ThemeChanger = () => {
             font-size: 14px;
           }
         `}
-      </style>
+      </style> */}
     </Fragment>
   );
 };

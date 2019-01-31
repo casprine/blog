@@ -8,7 +8,7 @@ const Logo = () => (
         <div className="symbol"> C </div>
       </div>
     </Link>
-    <style jsx>
+    {/* <style jsx>
       {`
         .ca-logo {
           width: 40px;
@@ -23,7 +23,7 @@ const Logo = () => (
           font-size: 20px;
         }
       `}
-    </style>
+    </style> */}
   </Fragment>
 );
 

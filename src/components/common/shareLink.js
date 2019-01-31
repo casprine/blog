@@ -36,7 +36,7 @@ const ShareLink = props => {
         </div>
       </a>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .share-button {
           width: 180px;
           border-radius: 8px;
@@ -73,7 +73,7 @@ const ShareLink = props => {
         .share-with {
           margin: auto 0;
         }
-      `}</style>
+      `}</style> */}
     </Fragment>
   );
 };
@@ -93,7 +93,7 @@ const ShareIt = props => {
         <ShareLink {...props} />
       </div>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .share {
           height: 300px;
           margin-top: 50px;
@@ -107,7 +107,7 @@ const ShareIt = props => {
           font-weight: 500;
           margin: 0;
         }
-      `}</style>
+      `}</style> */}
     </Fragment>
   );
 };

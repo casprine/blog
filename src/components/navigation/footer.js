@@ -32,7 +32,7 @@ const Footer = () => (
       )}
     </ContextConsumer>
 
-    <style jsx>{`
+    {/* <style jsx>{`
       .logo-wrapper {
         margin-right: auto;
       }
@@ -43,7 +43,7 @@ const Footer = () => (
           margin-top: 20px;
         }
       }
-    `}</style>
+    `}</style> */}
   </Fragment>
 );
 

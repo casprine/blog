@@ -29,7 +29,7 @@ const Navbar = () => (
       </div>
     </nav>
 
-    <style jsx>{`
+    {/* <style jsx>{`
       .navbar {
         padding-bottom: 40px;
       }
@@ -61,7 +61,7 @@ const Navbar = () => (
       //     width: 100%;
       //   }
       // }
-    `}</style>
+    `}</style> */}
   </Fragment>
 );
 

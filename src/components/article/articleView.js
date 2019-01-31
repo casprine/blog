@@ -77,7 +77,7 @@ const ArticleView = props => {
         <ShareIt title={title} id={id} />
       </section>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         section {
           margin-top: 50px;
           margin: 30px auto;
@@ -123,7 +123,7 @@ const ArticleView = props => {
           color: rgba(38, 41, 58, 0.8);
           line-height: 35px;
         }
-      `}</style>
+      `}</style> */}
     </Fragment>
   );
 };

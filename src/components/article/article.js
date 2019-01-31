@@ -19,7 +19,7 @@ const Article = ({ title, tag, summary, date, id }) => {
         </article>
       </Link>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .article {
           cursor: pointer;
           box-shadow: 0 1px 3px 0 rgba(38, 41, 58, 0.06);
@@ -47,7 +47,7 @@ const Article = ({ title, tag, summary, date, id }) => {
           margin: auto 0;
           color: ${Colors.grey};
         }
-      `}</style>
+      `}</style> */}
     </Fragment>
   );
 };
