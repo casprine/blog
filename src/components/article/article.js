@@ -1,10 +1,36 @@
 import React, { Fragment } from "react";
-// import { Colors } from "../common/index";
 import Link from "next/link";
 import { ContextConsumer } from "../../context/index";
 import { trimArticle, tagSelector } from "../../utils/helpers";
 import styled, { ThemeProvider } from "styled-components";
-import { white, black } from "../common/theme";
+import { white, black, grey } from "../common/index";
+
+const Article = ({ title, tag, summary, date, id }) => {
+  return (
+    <Fragment>
+      <ContextConsumer>
+        {({ theme }) => (
+          <ThemeProvider theme={{ mode: theme }}>
+            <Link as={`/p/${id}`} href={`/article?id=${id}`}>
+              <StyledArticle>
+                <div className="wrapper">
+                  <div className="book">{title}</div>
+                  <p className="meduim" theme={theme}>
+                    {trimArticle(summary, 100)}
+                  </p>
+                  <div className="footer flex">
+                    {tagSelector(tag, "img")}
+                    <span> {date}</span>
+                  </div>
+                </div>
+              </StyledArticle>
+            </Link>
+          </ThemeProvider>
+        )}
+      </ContextConsumer>
+    </Fragment>
+  );
+};
 
 const StyledArticle = styled.div`
   cursor: pointer;
@@ -24,6 +50,14 @@ const StyledArticle = styled.div`
     padding: 20px 30px;
   }
 
+  .book {
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: ${grey};
+  }
+
   .heading {
     font-size: 20px;
     font-family: "geo";
@@ -31,32 +65,7 @@ const StyledArticle = styled.div`
   span {
     font-size: 14ppx;
     margin: auto 0;
+    font-family: "book";
   }
 `;
-
-const Article = ({ title, tag, summary, date, id }) => {
-  return (
-    <Fragment>
-      <ContextConsumer>
-        {({ theme }) => (
-          <ThemeProvider theme={{ mode: theme }}>
-            <Link as={`/p/${id}`} href={`/article?id=${id}`}>
-              <StyledArticle>
-                <div className="wrapper">
-                  <div className="heading geo">{title}</div>
-                  <p>{trimArticle(summary, 100)}</p>
-                  <div className="footer flex">
-                    {tagSelector(tag, "img")}
-                    <span> {date}</span>
-                  </div>
-                </div>
-              </StyledArticle>
-            </Link>
-          </ThemeProvider>
-        )}
-      </ContextConsumer>
-    </Fragment>
-  );
-};
-
 export default Article;

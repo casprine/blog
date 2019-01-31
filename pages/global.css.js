@@ -1,10 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-// import circular from "../static/fonts/ciruclar.ttf";
-// import geo from "../static/fonts/geo.ttf";
-
 const GlobalStyles = createGlobalStyle`
 @font-face {
-    font-family: "circular";
+    font-family: "meduim";
     src: url("../static/fonts/CeraPro-Medium.ttf");
     font-weight: normal;
     font-style: normal;
@@ -13,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   @font-face {
-    font-family: "geo";
+    font-family: "regular";
     src: url("../static/fonts/CeraPro-Regular.ttf");
     font-weight: normal;
     font-style: normal;
@@ -21,8 +18,23 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  .geo {
+  @font-face {
+    font-family: 'Book';
+    src:  url('../static/fonts/geomanist-book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+  .regular {
     font-family: "geo";
+  }
+  .meduim {
+    font-family:"meduim";
+  }
+
+  .book{
+    font-family: "Book";
   }
 
   body {
@@ -30,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
     color: #071e3d;
@@ -125,10 +137,9 @@ a {
   color: $primary;
 }
 
-* {
-  // font-family: "circular";
+.pointer {
+  cursor:pointer;
 }
-
 
 `;
 
