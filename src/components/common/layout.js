@@ -19,30 +19,12 @@ const Layout = ({ children }) => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-
       <ContextConsumer>
         {({ theme }) => {
           return (
             <body className={theme ? "dark" : "light"}>
               <div>
                 <div style={layoutStyles.wrapper}>{children}</div>
-                {/* <style jsx>{`
-                  @font-face {
-                    font-family: "circular";
-                    src: url("../../static/fonts/ciruclar.ttf");
-                    font-weight: normal;
-                    font-style: normal;
-                    font-display: auto;
-                  }
-
-                  @font-face {
-                    font-family: "geo";
-                    src: url("../../static/fonts/geo.ttf");
-                    font-weight: normal;
-                    font-style: normal;
-                    font-display: auto;
-                  }
-                `}</style> */}
               </div>
             </body>
           );

@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import App, { Container } from "next/app";
 import { ContextProvider } from "../src/context/index.js";
-import "./bundle.css";
+import GlobalStyle from "./global.css";
 
 class MyApp extends App {
   render() {
@@ -12,6 +12,7 @@ class MyApp extends App {
         <Head>
           <html lang="en" />
         </Head>
+        <GlobalStyle />
         <ContextProvider value="light">
           <Component {...pageProps} />
         </ContextProvider>
