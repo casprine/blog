@@ -5,10 +5,24 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 @font-face {
     font-family: "circular";
-    src: url("../static/fonts/ciruclar.ttf");
+    src: url("../static/fonts/CeraPro-Medium.ttf");
     font-weight: normal;
     font-style: normal;
     font-display: auto;
+  }
+
+
+  @font-face {
+    font-family: "geo";
+    src: url("../static/fonts/CeraPro-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+
+  .geo {
+    font-family: "geo";
   }
 
   body {
@@ -21,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
     color: #071e3d;
     font-family: "circular";
+    background: #e6edf1;
   }
 
   .flex {
@@ -86,10 +101,34 @@ const GlobalStyles = createGlobalStyle`
     margin-right: auto;
   }
 }
-  
-  .circular {
 
-  }
+.padding {
+  padding: 40px 90px;
+  width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+.padding-side {
+  width: 85vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+.padding-top {
+  padding-top: 40px;
+}
+.padding-bottom {
+  padding-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+* {
+  // font-family: "circular";
+}
+
 
 `;
 

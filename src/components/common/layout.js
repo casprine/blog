@@ -22,11 +22,11 @@ const Layout = ({ children }) => {
       <ContextConsumer>
         {({ theme }) => {
           return (
-            <body className={theme ? "dark" : "light"}>
-              <div>
-                <div style={layoutStyles.wrapper}>{children}</div>
-              </div>
-            </body>
+            // <body className={theme ? "dark" : "light"}>
+            <div>
+              <div style={layoutStyles.wrapper}>{children}</div>
+            </div>
+            // </body>
           );
         }}
       </ContextConsumer>

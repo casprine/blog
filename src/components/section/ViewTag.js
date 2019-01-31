@@ -17,7 +17,11 @@ const StyledViewTag = styled.div`
 .tag {
   display: flex;
   cursor: pointer;
+  outline: 1px solid red;
 }
+
+
+
 img {
   width: 20px;
   height: 20px;

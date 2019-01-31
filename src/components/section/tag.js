@@ -17,6 +17,8 @@ const StyledTag = styled.div`
 div {
   display: flex;
   cursor: pointer;
+  outline: 1px solid red;
+
 }
 img {
   width: 20px;
