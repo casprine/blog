@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Colors } from "../common/index";
+// import { Colors } from "../common/index";
 import Link from "next/link";
 import { trimArticle, tagSelector } from "../../utils/helpers";
 

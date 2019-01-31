@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
             <body className={theme ? "dark" : "light"}>
               <div>
                 <div style={layoutStyles.wrapper}>{children}</div>
-                <style jsx>{`
+                {/* <style jsx>{`
                   @font-face {
                     font-family: "circular";
                     src: url("../../static/fonts/ciruclar.ttf");
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
                     font-style: normal;
                     font-display: auto;
                   }
-                `}</style>
+                `}</style> */}
               </div>
             </body>
           );

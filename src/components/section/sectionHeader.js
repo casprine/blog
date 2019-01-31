@@ -24,7 +24,7 @@ const SectionHeader = () => {
           </div>
         )}
       </ContextConsumer>
-      <style jsx>{`
+      {/* <style jsx>{`
         .section-header,
         img,
         div {
@@ -47,7 +47,7 @@ const SectionHeader = () => {
           // font-weight: 700;
           color: ${Colors.primary};
         }
-      `}</style>
+      `}</style> */}
     </Fragment>
   );
 };
