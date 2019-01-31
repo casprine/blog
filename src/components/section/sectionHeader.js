@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { ContextConsumer } from "../../context/index";
-import { white, grey } from "../common/index";
+import { grey, white } from "../common/index";
 
 const SectionHeader = () => {
   return (
@@ -14,7 +14,7 @@ const SectionHeader = () => {
               <div className="heading book">
                 <span>All Writings</span>
               </div>
-              <div className="description medium">
+              <div className="description book">
                 <span>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Soluta
@@ -35,7 +35,6 @@ const StyledSectionHeader = styled.div`
   align-items: center;
 
   div {
-    padding: 15px 0;
     text-align: center;
   }
 
@@ -43,20 +42,25 @@ const StyledSectionHeader = styled.div`
     width: 45px !important;
     height: 45px !important;
     border-radius: 4px;
+    padding: 15px 0;
   }
 
   .description {
     font-size: 20px;
-
+    text-transform: lowercase;
+    color: ${white};
     span {
-      color: ${grey};
+      color: inherit;
     }
   }
 
   .heading {
     font-size: 40px;
+    padding: 15px 0 10px 0;
+    color: ${white};
+
     span {
-      color: ${white};
+      color: inherit;
     }
   }
 `;

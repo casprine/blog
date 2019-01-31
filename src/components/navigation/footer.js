@@ -2,33 +2,36 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import { Logo } from "../common/index";
 import { ContextConsumer } from "../../context/index";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { white } from "../common/index";
 const Footer = () => (
   <Fragment>
     <ContextConsumer>
       {({ theme }) => (
-        <StyledFooter className="footer padding-bottom center">
-          <div className="logo-wrapper">
-            <Logo />
-          </div>
-          <div className="ca-routes">
-            <Link href="https://dribbble.com/casprine">
-              <span className={theme ? "lightText" : "darkText"}>Dribbble</span>
-            </Link>
-            <Link href="https://www.uplabs.com/casprine">
-              <span className={theme ? "lightText" : "darkText"}>Uplabs</span>
-            </Link>
-            <Link href="https://www.twitter.com/casprine">
-              <span className={theme ? "lightText" : "darkText"}>Twitter</span>
-            </Link>
-            <Link href="https://www.github.com/casprine">
-              <span className={theme ? "lightText" : "darkText"}>Github</span>
-            </Link>
-            {/* <Link to="/writings" className="link-inverse">
-          <span className="link white">Bookmarked</span>
-        </Link> */}
-          </div>
-        </StyledFooter>
+        <ThemeProvider theme={{ mode: theme }}>
+          <StyledFooter className="footer padding-bottom center">
+            <div className="logo-wrapper">
+              <Logo />
+            </div>
+            <div className="ca-routes">
+              <Link href="https://dribbble.com/casprine">
+                <span>Dribbble</span>
+              </Link>
+              <Link href="https://www.uplabs.com/casprine">
+                <span>Uplabs</span>
+              </Link>
+              <Link href="https://www.twitter.com/casprine">
+                <span>Twitter</span>
+              </Link>
+              <Link href="https://www.github.com/casprine">
+                <span>Github</span>
+              </Link>
+              {/* <Link to="/writings" className="link-inverse">
+              <span className="link white">Bookmarked</span>
+            </Link> */}
+            </div>
+          </StyledFooter>
+        </ThemeProvider>
       )}
     </ContextConsumer>
   </Fragment>
@@ -52,8 +55,9 @@ const StyledFooter = styled.nav`
       -webkit-transition: all 200ms ease;
       transition: all 200ms ease;
       cursor: pointer;
+      color: ${white};
       &:hover {
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid ${white};
       }
     }
 

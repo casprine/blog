@@ -8,6 +8,11 @@ const GlobalStyles = createGlobalStyle`
     font-display: auto;
   }
 
+  .articles{
+    margin:30px 0;
+  }
+
+
 
   @font-face {
     font-family: "regular";
@@ -47,7 +52,6 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
     color: #071e3d;
     font-family: "circular";
-    background: #e6edf1;
   }
 
   .flex {

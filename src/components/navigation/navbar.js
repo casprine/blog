@@ -20,7 +20,6 @@ const StyledNavbar = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 50px;
-  outline: 1px solid red;
   .ca-routes {
     width: 100%;
   }

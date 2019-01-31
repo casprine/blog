@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import { ContextConsumer } from "../../context/index";
 import Head from "next/head";
-import { white, black } from "./theme";
+import { body } from "./theme";
+import styled, { ThemeProvider } from "styled-components";
 
 const layoutStyles = {
   wrapper: {
@@ -23,16 +24,22 @@ const Layout = ({ children }) => {
       <ContextConsumer>
         {({ theme }) => {
           return (
-            <body className={theme ? "dark" : "light"}>
-              <div>
-                <div style={layoutStyles.wrapper}>{children}</div>
-              </div>
-            </body>
+            <ThemeProvider theme={{ mode: theme }}>
+              <StyledLayout>
+                <div>
+                  <div style={layoutStyles.wrapper}>{children}</div>
+                </div>
+              </StyledLayout>
+            </ThemeProvider>
           );
         }}
       </ContextConsumer>
     </Fragment>
   );
 };
+
+const StyledLayout = styled.div`
+  background-color: ${body};
+`;
 
 export default Layout;
