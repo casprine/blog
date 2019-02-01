@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
 };
 
 const StyledLayout = styled.div`
-  background-color: ${body};
+  background: ${body};
 `;
 
 export default Layout;

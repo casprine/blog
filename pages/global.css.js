@@ -50,7 +50,6 @@ const GlobalStyles = createGlobalStyle`
     font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
-    color: #071e3d;
     font-family: "circular";
   }
 
@@ -134,11 +133,6 @@ const GlobalStyles = createGlobalStyle`
 }
 .padding-bottom {
   padding-bottom: 40px;
-}
-
-a {
-  text-decoration: none;
-  color: $primary;
 }
 
 .pointer {
