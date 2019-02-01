@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Colors } from "../common/index";
 import styled from "styled-components";
 
 const Tag = ({ url, name }) => {
@@ -7,7 +6,7 @@ const Tag = ({ url, name }) => {
     <Fragment>
       <StyledTag className="flex tag">
         <img src={url} alt={name} />
-        {/* <span className="white">{name}</span> */}
+        <span className="white">{name}</span>
       </StyledTag>
     </Fragment>
   );
@@ -27,7 +26,6 @@ img {
 span {
   margin-left: 10px;
   font-size: 18px;
-  color: ${Colors.grey}
 `;
 
 export default Tag;

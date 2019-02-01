@@ -1,4 +1,4 @@
-const Colors = {
+const colors = {
   primary: "#071e3d",
   secondary: "#eaa81b",
   grey: "hsl(0, 0%, 27%)",
@@ -7,4 +7,4 @@ const Colors = {
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
 };
 
-export default Colors;
+export default colors;

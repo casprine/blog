@@ -1,35 +1,34 @@
 import React, { Fragment } from "react";
-import { Colors } from "../common/index";
 import styled from "styled-components";
 const ViewTag = props => {
   const { url, name } = props[0];
   return (
     <Fragment>
-      <StyledViewTag className="flex tag">
+      <StyledViewTag>
         <img src={url} alt={name} />
-        <span className="white">{name}</span>
+        <div>{name}</div>
       </StyledViewTag>
     </Fragment>
   );
 };
 
 const StyledViewTag = styled.div`
-.tag {
   display: flex;
-  cursor: pointer;
-  outline: 1px solid red;
-}
+  align-items: center;
+  justify-content: center;
 
-
-
-img {
-  width: 20px;
-  height: 20px;
-}
-span {
-  margin-left: 10px;
-  font-size: 18px;
-  color: ${Colors.grey}
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  div {
+    font-size: 18px;
+    vertical-align: super;
+    font-family: "book";
+    margin-top: 3px;
+  }
 `;
 
 export default ViewTag;

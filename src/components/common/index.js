@@ -1,4 +1,4 @@
-import Colors from "./colors";
+import colors from "./colors";
 import Layout from "./layout";
 import Logo from "./logo";
 import TagImage from "./tagImage";
@@ -7,7 +7,7 @@ import ThemeChanger from "./themeChanger";
 import { black, grey, white } from "./theme";
 export {
   Layout,
-  Colors,
+  colors,
   Logo,
   TagImage,
   ShareIt,
