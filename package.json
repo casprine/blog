@@ -3,19 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "express": "^4.16.4",
-    "gulp": "^4.0.0",
-    "gulp-json-concat": "^0.1.1",
     "next": "^7.0.2",
     "next-manifest": "^1.6.0",
-    "node-sass": "^4.11.0",
-    "processmd": "^4.4.0",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.1.1",
-    "sass-loader": "7.1.0",
     "styled-components": "^4.1.3",
     "styled-theming": "^2.2.0"
   },
@@ -24,7 +18,6 @@
     "dev": "node server.js",
     "export": "next export",
     "build": "next build",
-    "build-content": "processmd content/*.md --stdout --outputDir posts && gulp json",
     "start": "NODE_ENV=production node server.js"
   },
   "eslintConfig": {

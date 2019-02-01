@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
-import { Colors } from "./index";
 import { env } from "../../utils/helpers";
-
+import styled from "styled-components";
 const ShareLink = props => {
   return (
     <Fragment>
-      <a
+      <StyledShareLink
         href={`https://twitter.com/intent/tweet?text=${
           props.title
         }&url=${env.url + "p/" + props.id}`}
@@ -34,46 +33,7 @@ const ShareLink = props => {
           </div>
           <span className="share-with geo">Share With Twitter</span>
         </div>
-      </a>
-
-      {/* <style jsx>{`
-        .share-button {
-          width: 180px;
-          border-radius: 8px;
-          background: rgb(0, 172, 237);
-          padding: 10px 20px;
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .icon {
-          display: inline-block;
-          flex: 0 0 32px;
-          width: 32px;
-          height: 32px;
-          min-width: 32px;
-          min-height: 32px;
-          position: relative;
-          color: inherit;
-        }
-
-        svg {
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          bottom: 0px;
-          left: 0px;
-          height: 100%;
-          width: 100%;
-          color: inherit;
-          fill: white;
-        }
-        .share-with {
-          margin: auto 0;
-        }
-      `}</style> */}
+      </StyledShareLink>
     </Fragment>
   );
 };
@@ -81,35 +41,70 @@ const ShareLink = props => {
 const ShareIt = props => {
   return (
     <Fragment>
-      <div className="share">
+      <StyledShareIt>
         <h1> Love the Article ? Spread it</h1>
-        <p>
-          <span> Love the Article ? Let it reach others </span>
-          <span role="img" aria-label="smiley">
-            😊
-          </span>
-        </p>
-
+        <span> Love the Article ? Let it reach others </span>
+        <span role="img" aria-label="smiley">
+          😊
+        </span>
         <ShareLink {...props} />
-      </div>
-
-      {/* <style jsx>{`
-        .share {
-          height: 300px;
-          margin-top: 50px;
-        }
-
-        h1 {
-          font-size: 40px;
-          color: ${Colors.primary};
-          letter-spacing: 0.2px;
-          line-height: 52px;
-          font-weight: 500;
-          margin: 0;
-        }
-      `}</style> */}
+      </StyledShareIt>
     </Fragment>
   );
 };
+
+const StyledShareLink = styled.a`
+  text-decoration: none;
+
+  .share-button {
+    width: 180px;
+    border-radius: 8px;
+    background: rgb(0, 172, 237);
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+
+  .icon {
+    display: inline-block;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    position: relative;
+    color: inherit;
+  }
+
+  svg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    color: inherit;
+    fill: white;
+  }
+  .share-with {
+    margin: auto 0;
+  }
+`;
+
+const StyledShareIt = styled.div`
+  height: 300px;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+`;
 
 export default ShareIt;

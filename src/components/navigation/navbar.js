@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-// import Link from "next/link";
 import { Logo, ThemeChanger } from "../common/index";
 import styled from "styled-components";
+
 const Navbar = () => (
   <Fragment>
     <StyledNavbar className="padding-top">
