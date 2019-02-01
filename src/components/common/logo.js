@@ -27,6 +27,7 @@ const StyledLogo = styled.div`
 
   .symbol {
     font-size: 20px;
+    font-family: "book";
   }
 `;
 

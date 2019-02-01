@@ -56,6 +56,7 @@ const StyledFooter = styled.nav`
       transition: all 200ms ease;
       cursor: pointer;
       color: ${white};
+      font-family: "book";
       &:hover {
         border-bottom: 2px solid ${white};
       }

@@ -59,11 +59,10 @@ const StyledArticle = styled.div`
   }
 
   .heading {
-    font-size: 20px;
-    font-family: "geo";
+    outline: 1px solid red !important;
   }
   span {
-    font-size: 14ppx;
+    font-size: 14px;
     margin: auto 0;
     font-family: "book";
   }

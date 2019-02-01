@@ -12,7 +12,7 @@ const SectionHeader = () => {
             <StyledSectionHeader>
               <img src="http://2ality.com/2011/10/logo-js/js.jpg" alt="" />
               <div className="heading book">
-                <span>All Writings</span>
+                <h2>All Writings</h2>
               </div>
               <div className="description book">
                 <span>
@@ -33,7 +33,6 @@ const StyledSectionHeader = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-
   div {
     text-align: center;
   }
@@ -48,19 +47,16 @@ const StyledSectionHeader = styled.div`
   .description {
     font-size: 20px;
     text-transform: lowercase;
-    color: ${white};
     span {
-      color: inherit;
+      color: ${grey};
     }
   }
 
   .heading {
-    font-size: 40px;
-    padding: 15px 0 10px 0;
-    color: ${white};
+    font-size: 25px;
 
-    span {
-      color: inherit;
+    h2 {
+      color: ${white};
     }
   }
 `;
