@@ -7,13 +7,6 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-display: auto;
   }
-
-  .articles{
-    margin:30px 0;
-  }
-
-
-
   @font-face {
     font-family: "regular";
     src: url("../static/fonts/CeraPro-Regular.ttf");
@@ -23,12 +16,29 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
+
   @font-face {
     font-family: 'Book';
     src:  url('../static/fonts/geomanist-book.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: auto;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+    scroll-behavior: smooth;
+    font-family: "meduim";
+  }
+
+
+  .articles{
+    margin:30px 0;
   }
 
   .regular {
@@ -41,18 +51,6 @@ const GlobalStyles = createGlobalStyle`
   .book{
     font-family: "Book";
   }
-
-  body {
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    scroll-behavior: smooth;
-    font-family: "circular";
-  }
-
   .flex {
     display: flex;
     flex-wrap: wrap;
@@ -138,6 +136,8 @@ const GlobalStyles = createGlobalStyle`
 .pointer {
   cursor:pointer;
 }
+
+
 
 `;
 

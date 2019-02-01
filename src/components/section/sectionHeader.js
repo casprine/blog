@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { ContextConsumer } from "../../context/index";
-import { grey, white, black, body } from "../common/index";
+import { grey, white } from "../common/index";
 
 const SectionHeader = () => {
   return (
@@ -48,13 +48,16 @@ const StyledSectionHeader = styled.div`
     font-size: 20px;
     text-transform: lowercase;
     span {
-      color: ${black} !important;
+      color: ${grey};
     }
   }
 
   .heading {
     font-size: 25px;
-    color: ${black} !important;
+
+    h2 {
+      color: ${white};
+    }
   }
 `;
 
