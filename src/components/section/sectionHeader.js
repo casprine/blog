@@ -1,64 +1,59 @@
 import React, { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { ContextConsumer } from "../../context/index";
-import { grey, white } from "../common/index";
+import { white, black, grey } from "../common/index";
 
 const SectionHeader = () => {
   return (
     <Fragment>
       <ContextConsumer>
-        {({ theme }) => (
-          <ThemeProvider theme={{ mode: theme }}>
-            <StyledSectionHeader>
-              <img src="http://2ality.com/2011/10/logo-js/js.jpg" alt="" />
-              <div className="heading book">
-                <h2>All Writings</h2>
-              </div>
-              <div className="description book">
-                <span>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Soluta
-                </span>
-              </div>
-            </StyledSectionHeader>
-          </ThemeProvider>
-        )}
+        {({ theme }) => {
+          console.log(theme);
+          return (
+            <ThemeProvider theme={{ mode: theme }}>
+              <StyledSection>
+                <img
+                  src="https://2ality.com/2011/10/logo-js/js.jpg"
+                  alt="jsImage"
+                />
+                <StyledHeading>All Writings</StyledHeading>
+                <StyledDescription className="desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Natus sit ratione sapiente maiores iste totam
+                </StyledDescription>
+              </StyledSection>
+            </ThemeProvider>
+          );
+        }}
       </ContextConsumer>
     </Fragment>
   );
 };
 
-const StyledSectionHeader = styled.div`
+const StyledSection = styled.div`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  div {
-    text-align: center;
-  }
-
+  font-family: "book";
   img {
-    width: 45px !important;
-    height: 45px !important;
-    border-radius: 4px;
+    width: 50px;
+    height: 50px;
     padding: 15px 0;
   }
 
-  .description {
-    font-size: 20px;
-    text-transform: lowercase;
-    span {
-      color: ${grey};
-    }
+  div {
+    padding: 10px 0;
   }
+`;
 
-  .heading {
-    font-size: 25px;
+const StyledHeading = styled.div`
+  font-size: 35px;
+  color: ${black};
+`;
 
-    h2 {
-      color: ${white};
-    }
-  }
+const StyledDescription = styled.div`
+  color: ${grey};
+  font-size: 18px;
 `;
 
 export default SectionHeader;

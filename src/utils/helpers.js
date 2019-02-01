@@ -14,9 +14,9 @@ export function day() {
   const now = new Date();
   const hour = now.getHours();
   if (hour > 4 && hour < 18) {
-    return true;
+    return "dark";
   }
-  return false;
+  return "light";
 }
 
 /**

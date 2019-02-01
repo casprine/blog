@@ -14,25 +14,6 @@ const Pagination = () => {
           <span className="white">Next</span>
         </div>
       </nav>
-
-      {/* <style jsx>{`
-        nav {
-          margin-bottom: 50px;
-          margin-top: 20px;
-        }
-
-        .left {
-          margin-right: auto;
-        }
-
-        * {
-          font-family: "geo";
-        }
-
-        .right {
-          font-size: 17px;
-        }
-      `}</style> */}
     </Fragment>
   );
 };

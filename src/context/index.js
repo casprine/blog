@@ -6,7 +6,7 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: !day(),
+    dark: false,
     artiles: null,
     currentArticle: null
   };
