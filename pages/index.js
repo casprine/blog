@@ -11,7 +11,7 @@ class Index extends Component {
     return (
       <Fragment>
         <Head>
-          <title>Diario</title>
+          <title>Journal</title>
           <meta
             name="title"
             content="Writings on CSS and Javascript written by Casprine. Frontend Developer and Designer"
