@@ -6,12 +6,12 @@ export const black = theme("mode", {
 });
 
 export const white = theme("mode", {
-  false: "#33335a",
+  false: "hsl(209, 61%, 16%)",
   true: "#fff"
 });
 
 export const grey = theme("mode", {
-  false: "rgb(84, 94, 111)",
+  false: "hsl(209, 34%, 30%)",
   true: "#fff"
 });
 

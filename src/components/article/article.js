@@ -37,7 +37,7 @@ const StyledArticle = styled.div`
   border-radius: 3px;
   padding: 10px 0;
   transition: 0.3s ease-out;
-  color: #33335a;
+  color: hsl(209, 61%, 16%);
   background-color: white;
 
   &:hover {
@@ -54,7 +54,7 @@ const StyledArticle = styled.div`
   }
 
   p {
-    color: rgb(84, 94, 111);
+    color: hsl(209, 34%, 30%);
   }
 
   span {

@@ -4,8 +4,8 @@ import { ShareIt } from "../common/index";
 import { tagSelector } from "../../utils/helpers";
 import { env } from "../../utils/helpers";
 import styled from "styled-components";
-import { white, colors } from "../common/index";
-
+import { colors } from "../common/index";
+import { grey, white } from "../common/theme";
 const ArticleView = props => {
   const { title, summary, date, tag, bodyContent: content, id } = props[0];
   // const [saved, setStatus] = useState(false);
@@ -41,7 +41,7 @@ const ArticleView = props => {
       </Head>
 
       <StyledArticleView>
-        <h1 className="book"> {title}</h1>
+        <h1 className="book title"> {title}</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
           <div>{tagSelector(tag, "tag")}</div>
           <div className="bullet">•</div>
@@ -80,6 +80,16 @@ const StyledArticleView = styled.section`
   margin: 30px auto;
   padding-bottom: 50px;
   color: ${white};
+  outline: 1px solid red;
+
+  * {
+    /* outline: 1px solid red; */
+  }
+
+  .title {
+    outline: 1px solid red;
+    color: ${white};
+  }
 
   .icon {
     width: 20px;
@@ -119,6 +129,7 @@ const StyledArticleView = styled.section`
     font-size: 20px;
     margin-bottom: 1rem;
     line-height: 35px;
+    color: ${grey};
   }
 `;
 
