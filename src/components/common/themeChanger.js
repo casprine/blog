@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { ContextConsumer } from "../../context/index";
+import styled from "styled-components";
+import { body, grey, white } from "./theme";
 
 const ThemeChanger = () => {
   return (
@@ -7,32 +9,46 @@ const ThemeChanger = () => {
       <ContextConsumer>
         {({ theme, switchTheme }) => {
           return (
-            <div className="theme-changer pointer" onClick={switchTheme}>
-              <span role="img" aria-label="moon">
-                {theme ? "🌚" : "🌝"}
+            <StyledToggler onClick={switchTheme}>
+              <span className={theme ? "icon" : "light"} theme={theme}>
+                {theme ? "◉" : "○"}
               </span>
-            </div>
+              <span className="text">
+                {theme ? "Night Mode" : "Light Mode"}
+              </span>
+            </StyledToggler>
           );
         }}
       </ContextConsumer>
-
-      {/* <style jsx>
-        {`
-          div {
-            margin-left: auto;
-          }
-
-          span {
-            font-size: 20px !important;
-          }
-
-          span:last-child {
-            font-size: 14px;
-          }
-        `}
-      </style> */}
     </Fragment>
   );
 };
 
+const StyledToggler = styled.div`
+  color: ${white};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  * {
+    padding: 0 5px;
+    display: block;
+  }
+
+  .light {
+    line-height: 10px;
+    align-self: center;
+    margin-top: -2px;
+    font-size: 20px;
+  }
+  .icon {
+    margin-top: 2px;
+  }
+
+  .text {
+    /* font-size: 15px; */
+    font-family: "Book";
+  }
+`;
 export default ThemeChanger;

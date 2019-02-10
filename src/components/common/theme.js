@@ -16,8 +16,8 @@ export const grey = theme("mode", {
 });
 
 export const body = theme("mode", {
-  false: "#e6edf1",
-  true: "rgb(40, 44, 53)"
+  false: "#E7EEF8",
+  true: "rgb(27,27,30)"
 });
 
 export const border = theme("mode", {
