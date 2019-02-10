@@ -17,5 +17,10 @@ export const grey = theme("mode", {
 
 export const body = theme("mode", {
   false: "#e6edf1",
-  true: "#000000"
+  true: "rgb(40, 44, 53)"
+});
+
+export const border = theme("mode", {
+  false: " hsl(209, 61%, 16%)",
+  true: " hsl(36, 77%, 49%)"
 });

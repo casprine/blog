@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-
+import { border } from "./theme";
 const Logo = () => (
   <Fragment>
     <Link href="/">
@@ -16,7 +16,7 @@ const StyledLogo = styled.div`
   div {
     width: 40px;
     height: 40px;
-    border: 2px solid #071e3d;
+    border: 2px solid ${border};
     cursor: pointer;
     background: white;
     transition: 0.3s ease-in-out;
