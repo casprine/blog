@@ -51,6 +51,8 @@ const StyledSection = styled.div`
 
   .desc {
     color: ${grey};
+    text-align: center;
+    line-height: 30px;
   }
 `;
 export default SectionHeader;

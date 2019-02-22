@@ -8,7 +8,8 @@ class ContextProvider extends Component {
   state = {
     dark: false,
     artiles: null,
-    currentArticle: null
+    currentArticle: null,
+    footer: false
   };
 
   componentWillMount() {
@@ -18,10 +19,16 @@ class ContextProvider extends Component {
     });
   }
 
-  switchTheme = () => {
+  toggleTheme = () => {
     this.state.dark
       ? this.setState({ dark: false })
       : this.setState({ dark: true });
+  };
+
+  toggleFooter = () => {
+    this.state.footer
+      ? this.setState({ footer: false })
+      : this.setState({ footer: true });
   };
 
   fetchById = id => {
@@ -30,15 +37,17 @@ class ContextProvider extends Component {
   };
 
   render() {
-    const { dark, articles } = this.state;
+    const { dark, articles, footer } = this.state;
     return (
       <Fragment>
         <ContextContext.Provider
           value={{
             theme: dark,
+            footer: footer,
             articles: articles,
-            switchTheme: this.switchTheme,
-            fetchById: this.fetchById
+            toggleTheme: this.toggleTheme,
+            fetchById: this.fetchById,
+            toggleFooter: this.toggleFooter
           }}
         >
           {this.props.children}

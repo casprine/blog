@@ -80,14 +80,13 @@ const StyledArticleView = styled.section`
   margin: 30px auto;
   padding-bottom: 50px;
   color: ${white};
-  outline: 1px solid red;
+  width: 80%;
 
-  * {
-    /* outline: 1px solid red; */
+  @media (max-width: 750px) {
+    width: 100%;
   }
 
   .title {
-    outline: 1px solid red;
     color: ${white};
   }
 
@@ -122,6 +121,10 @@ const StyledArticleView = styled.section`
     line-height: 52px;
     font-weight: 500;
     margin: 0;
+
+    @media (max-width: 450px) {
+      font-size: 26px;
+    }
   }
 
   p {
@@ -130,6 +133,11 @@ const StyledArticleView = styled.section`
     margin-bottom: 1rem;
     line-height: 35px;
     color: ${grey};
+
+    @media (max-width: 750px) {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 `;
 

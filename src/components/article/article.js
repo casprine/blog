@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ContextConsumer } from "../../context/index";
 import { trimArticle, tagSelector } from "../../utils/helpers";
 import styled, { ThemeProvider } from "styled-components";
+import { white, black } from "../common/";
 
 const Article = ({ title, tag, summary, date, id }) => {
   return (
@@ -37,8 +38,8 @@ const StyledArticle = styled.div`
   border-radius: 3px;
   padding: 10px 0;
   transition: 0.3s ease-out;
-  color: hsl(209, 61%, 16%);
-  background-color: white;
+  color: ${white};
+  background-color: ${black};
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 5px 15px,
@@ -51,10 +52,6 @@ const StyledArticle = styled.div`
 
   .book {
     font-size: 1.2rem;
-  }
-
-  p {
-    color: hsl(209, 34%, 30%);
   }
 
   span {
