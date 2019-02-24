@@ -9,7 +9,7 @@ const ShareLink = props => {
           props.title
         }&url=${env.url + "p/" + props.id}`}
       >
-        <div className="share-button ">
+        <div className="share-button">
           <div className="wrapper  flex">
             <span className="icon">
               <svg
@@ -96,7 +96,6 @@ const StyledShareLink = styled.a`
 `;
 
 const StyledShareIt = styled.div`
-  height: 300px;
   margin-top: 50px;
   font-family: "Book";
 

@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
     font-family: "meduim";
+    font-feature-settings:"calt", "kern", "liga";
   }
 
 
@@ -40,7 +41,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .inter{
-  font-style:none;
     font-family:"Inter";
   }
   .flex {

@@ -155,7 +155,7 @@ const StyledArticleView = styled.section`
     font-size: 17px;
     margin-bottom: 1rem;
     font-family: "Inter";
-    line-height: 30px;
+    line-height: 35px;
 
     @media (max-width: 750px) {
       font-size: 15px;

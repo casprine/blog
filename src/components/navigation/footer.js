@@ -38,6 +38,11 @@ const Footer = () => (
 );
 
 const StyledFooter = styled.nav`
+  @media (max-width: 750px) {
+    outline: 1px solid red;
+    display: none !important;
+  }
+
   .logo-wrapper {
     margin-right: auto;
   }

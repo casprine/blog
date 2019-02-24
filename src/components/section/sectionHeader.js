@@ -50,7 +50,6 @@ const StyledSection = styled.div`
 
   .desc {
     color: ${grey};
-    font-style: normal;
     text-align: center;
   }
 `;
