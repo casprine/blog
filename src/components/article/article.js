@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ContextConsumer } from "../../context/index";
 import { trimArticle, tagSelector } from "../../utils/helpers";
 import styled, { ThemeProvider } from "styled-components";
-import { white, black } from "../common/";
+import { grey, white, black } from "../common/";
 
 const Article = ({ title, tag, summary, date, id }) => {
   return (
@@ -15,8 +15,11 @@ const Article = ({ title, tag, summary, date, id }) => {
               <StyledArticle>
                 <div className="wrapper">
                   <div className="book">{title}</div>
-                  <p className="meduim" theme={theme}>
-                    {trimArticle(summary, 100)}
+                  <p className="inter" theme={theme}>
+                    {/* {trimArticle(summary, 100)} */}
+                    Inter is a font family for highly legible text on computer
+                    screens. It’s open source and free to use in almost any way
+                    imaginable.
                   </p>
                   <div className="footer flex">
                     {tagSelector(tag, "img")}
@@ -50,6 +53,11 @@ const StyledArticle = styled.div`
     padding: 20px 30px;
   }
 
+  p {
+    /* outline: 1px solid red; */
+    color: ${grey};
+    font-size: 14px;
+  }
   .book {
     font-size: 1.2rem;
   }

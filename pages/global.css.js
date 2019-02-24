@@ -1,22 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
-@font-face {
-    font-family: "meduim";
-    src: url("../static/fonts/CeraPro-Medium.ttf");
-    font-weight: normal;
-    font-style: normal;
-    font-display: auto;
-  }
-  @font-face {
-    font-family: "regular";
-    src: url("../static/fonts/CeraPro-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-    font-display: auto;
-  }
-
-
-
   @font-face {
     font-family: 'Book';
     src:  url('../static/fonts/geomanist-book.woff2') format('woff2');
@@ -24,6 +7,16 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-display: auto;
   }
+
+
+  @font-face {
+    font-family: 'Inter';
+    src:  url('../static/fonts/Inter.var.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
 
   body {
     margin: 0;
@@ -41,15 +34,14 @@ const GlobalStyles = createGlobalStyle`
     margin:30px 0;
   }
 
-  .regular {
-    font-family: "geo";
-  }
-  .meduim {
-    font-family:"meduim";
-  }
-
+ 
   .book{
     font-family: "Book";
+  }
+
+  .inter{
+  font-style:none;
+    font-family:"Inter";
   }
   .flex {
     display: flex;

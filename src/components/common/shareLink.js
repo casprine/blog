@@ -55,7 +55,7 @@ const ShareIt = props => {
 
 const StyledShareLink = styled.a`
   text-decoration: none;
-
+  font-family: "Book";
   .share-button {
     width: 180px;
     border-radius: 8px;
@@ -98,10 +98,11 @@ const StyledShareLink = styled.a`
 const StyledShareIt = styled.div`
   height: 300px;
   margin-top: 50px;
+  font-family: "Book";
 
   h1 {
-    font-size: 40px;
     letter-spacing: 0.2px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 10px;
   }
