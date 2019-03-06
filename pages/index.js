@@ -87,11 +87,25 @@ class Index extends Component {
           <Navbar />
           <SectionHeader />
           {/* <Tags /> */}
+<<<<<<< HEAD
           <div className="articles grid-3">
             {this.props.posts.map(({ document, slug }, i) => {
               return <ArticleCard {...document} slug={slug} key={i} />;
             })}
           </div>
+=======
+          <ContextConsumer>
+            {({ articles }) => {
+              return (
+                <div className="articles grid-3">
+                  {articles.map((post, i) => {
+                    return <ArticleCard {...post} key={i} />;
+                  })}
+                </div>
+              );
+            }}
+          </ContextConsumer>
+>>>>>>> 45521b70caeab6cea02064bad4f371a6e9b35a52
           <Footer />
         </Layout>
       </Fragment>

@@ -38,4 +38,8 @@ pages/bundle.css.map
 
 #content 
 content
+<<<<<<< HEAD
+=======
+posts
+>>>>>>> 45521b70caeab6cea02064bad4f371a6e9b35a52
 gulpfile.js
