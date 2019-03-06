@@ -1,0 +1,41 @@
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.next
+todo.md
+.package.json.swp
+.idea
+
+
+yarn-debug.log*
+yarn-error.log*
+out
+.sass-cache/
+
+
+
+# Sass local stuff
+static/sass/.sass-cache
+static/sass/bundle.css.map
+pages/bundle.css.map
+.sass-cache/
+
+
+#content 
+content
+gulpfile.js

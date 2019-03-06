@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "casprinee",
+  "alias": "casprine-blog.now.sh",
+  "public": true,
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next@canary" },
+    { "src": "static/**", "use": "@now/static" },
+    { "src": "static/fonts/", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/p/(?<id>.+)", "dest": "/article?id=$id" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
