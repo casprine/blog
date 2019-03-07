@@ -8,36 +8,6 @@ import { env } from "../src/utils/helpers";
 import matter from "gray-matter";
 
 class Index extends Component {
-  static async getInitialProps() {
-    // Get posts from folder
-    const posts = (ctx => {
-      const keys = ctx.keys();
-      const values = keys.map(ctx);
-
-      const data = keys.map((key, index) => {
-        // Create slug from file name
-        const slug = key
-          .replace(/^.*[\\\/]/, "")
-          .split(".")
-          .slice(0, -1)
-          .join(".");
-        const value = values[index];
-
-        // Parse document
-        const document = matter(value);
-        return {
-          document,
-          slug
-        };
-      });
-
-      return data;
-    })(require.context("../posts", true, /\.md$/));
-
-    return {
-      posts
-    };
-  }
   render() {
     return (
       <Fragment>
@@ -97,5 +67,36 @@ class Index extends Component {
     );
   }
 }
+
+Index.getInitialProps = async () => {
+  // Get posts from folder
+  const posts = (ctx => {
+    const keys = ctx.keys();
+    const values = keys.map(ctx);
+
+    const data = keys.map((key, index) => {
+      // Create slug from file name
+      const slug = key
+        .replace(/^.*[\\\/]/, "")
+        .split(".")
+        .slice(0, -1)
+        .join(".");
+      const value = values[index];
+
+      // Parse document
+      const document = matter(value);
+      return {
+        document,
+        slug
+      };
+    });
+
+    return data;
+  })(require.context("../posts", true, /\.md$/));
+
+  return {
+    posts
+  };
+};
 
 export default Index;

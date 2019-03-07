@@ -12,7 +12,7 @@ const Article = ({ data: props, slug: id }) => {
       <ContextConsumer>
         {({ theme }) => (
           <ThemeProvider theme={{ mode: theme }}>
-            <Link as={`/p/${id}`} href={`/article?id=${id}`}>
+            <Link as={`/${id}`} href={`/article?id=${id}`}>
               <StyledArticle>
                 <div className="wrapper">
                   <div className="book title">{props.title}</div>

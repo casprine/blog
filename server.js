@@ -10,7 +10,7 @@ app
   .then(() => {
     const server = express();
 
-    server.get("/p/:id", (req, res) => {
+    server.get("/:id", (req, res) => {
       const nextJsPage = "/article";
       const queryParams = { id: req.params.id };
       app.render(req, res, nextJsPage, queryParams);

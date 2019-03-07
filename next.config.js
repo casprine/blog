@@ -8,7 +8,7 @@ module.exports = {
       use: "raw-loader"
     });
     return config;
-  },
+  }
 
   // async exportPathMap() {
   //   const numberOfPost = fs.readdir(dir, (err, files) => {
