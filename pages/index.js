@@ -25,7 +25,6 @@ class Index extends Component {
 
         // Parse document
         const document = matter(value);
-
         return {
           document,
           slug

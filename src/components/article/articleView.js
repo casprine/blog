@@ -17,51 +17,23 @@ const ArticleView = ({
   useEffect(() => Prism.highlightAll());
   return (
     <Fragment>
-      <Head>
-        <title>{title}</title>
-        <meta name="title" content={title} />
-        <meta name="description" content={spoiler} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={env.url + `p/${id}`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={spoiler} />
-        <meta
-          property="og:image"
-          content="https://pbs.twimg.com/profile_images/1044281937949577216/mO5YBqkE_400x400.jpg"
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@flickr" />
-        <meta
-          name="twitter:title"
-          content="Small Island Developing States Photo Submission"
-        />
-        <meta name="twitter:description" content="View the album on Flickr." />
-        <meta
-          name="twitter:image"
-          content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"
-        />
-      </Head>
-
       <StyledArticleView>
         <h1 className="book title"> {title}</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
           <div>{tagSelector(tag, "tag")}</div>
           <div className="bullet">•</div>
           <div className="date">{date}</div>
-          {/* <span className="bullet white">•</span> */}
-          {/* <span className="flex" onClick={() => saveArticle()}>
+          <span className="bullet white">•</span>
+          {/* <span className="flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
-              className={saved ? "save" : "icon"}
+              className="save"
             >
               <path d="M128 80v380c0 3.3 3.8 5.2 6.4 3.2l116.8-92c2.9-2.1 6.8-2.1 9.6 0l116.8 92c2.6 2 6.4.1 6.4-3.2V80c0-17.7-14.3-32-32-32H160c-17.7 0-32 14.3-32 32z" />
             </svg>
-            <span className="pointer white">
-              {saved ? " Remove from bookmark" : " Save Article"}
-            </span>
-          </span>  */}
+            <span className="pointer white">" Remove from bookmark"</span>
+          </span> */}
         </div>
         <article className="spoiler">
           <p>{spoiler}</p>

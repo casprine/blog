@@ -6,7 +6,7 @@ import matter from "gray-matter";
 
 class Article extends Component {
   static async getInitialProps({ query }) {
-    console.log(query, "query");
+    console.log(query, "query from article view");
     const post = await import(`../posts/${query.id}.md`);
     const document = matter(post.default);
 
