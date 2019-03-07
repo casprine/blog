@@ -19,6 +19,7 @@
   },
   "scripts": {
     "deploy": "now rm casprinee --safe --yes && now && now alias",
+    "deploy:test": "yarn build && yarn export && cp static/_redirects out/_redirects",
     "dev": "node server.js",
     "export": "next export",
     "build": "next build",
