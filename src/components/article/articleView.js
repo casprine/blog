@@ -100,9 +100,11 @@ const StyledArticleView = styled.section`
   h3,
   h4,
   h5,
-  h6 {
-    font-family: "book";
+  h6,
+  strong {
+    font-family: "Book";
     letter-spacing: 1px;
+    font-weight: 400 !important;
   }
 
   p {
