@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
       </Head>
       <ContextConsumer>
         {({ theme }) => {
+          console.log(theme, "from layout");
           return (
             <ThemeProvider theme={{ mode: theme }}>
               <StyledLayout>

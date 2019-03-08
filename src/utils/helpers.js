@@ -9,14 +9,14 @@ export function trimArticle(article, max) {
   return trimedArticle + "....";
 }
 
-// tell whether it's or not
+// tell whether it's day or not
 export function day() {
   const now = new Date();
   const hour = now.getHours();
   if (hour > 4 && hour < 18) {
-    return "true";
+    return true;
   }
-  return "false";
+  return false;
 }
 
 /**

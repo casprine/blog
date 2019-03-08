@@ -1,36 +1,36 @@
 import theme from "styled-theming";
 
 export const black = theme("mode", {
-  false: "#fff",
-  true: "rgb(28, 41, 56)"
+  true: "#fff",
+  false: "rgb(28, 41, 56)"
 });
 
 export const white = theme("mode", {
-  false: "hsl(209, 61%, 16%)",
-  true: "#fff"
+  true: "hsl(209, 61%, 16%)",
+  false: "#fff"
 });
 
 export const grey = theme("mode", {
-  false: "hsl(209, 34%, 30%)",
-  true: "#fff"
+  true: "hsl(209, 34%, 30%)",
+  false: "#fff"
 });
 
 export const body = theme("mode", {
-  false: "#E7EEF8",
-  true: "rgb(16, 23, 30) "
+  true: "#E7EEF8",
+  false: "rgb(16, 23, 30) "
 });
 
 export const border = theme("mode", {
-  false: " hsl(209, 61%, 16%)",
-  true: " hsl(36, 77%, 49%)"
+  true: " hsl(209, 61%, 16%)",
+  false: " hsl(36, 77%, 49%)"
 });
 
 export const footer = theme("mode", {
-  true: "#E7EEF8",
-  false: "rgb(16, 23, 30)"
+  true: "rgb(16, 23, 30)",
+  false: "#E7EEF8"
 });
 
 export const footerText = theme("mode", {
-  false: "#fff",
-  true: ""
+  false: "",
+  true: "#fff"
 });

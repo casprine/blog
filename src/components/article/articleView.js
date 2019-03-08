@@ -22,7 +22,7 @@ const ArticleView = ({
           <div>{tagSelector(tag, "tag")}</div>
           <div className="bullet">•</div>
           <div className="date">{date}</div>
-          <span className="bullet white">•</span>
+          {/* <span className="bullet white">•</span> */}
           {/* <span className="flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
