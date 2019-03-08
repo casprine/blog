@@ -88,7 +88,18 @@ const Navbar = () => (
               </div>
             </div>
             <div className="bar">
-              <div className="logo">c</div>
+              <div className="logo">
+                <Link href="/">
+                  <img
+                    src={
+                      theme
+                        ? "../../../static/images/circle-dark.webp"
+                        : "../../../static/images/circle.webp"
+                    }
+                    alt=""
+                  />
+                </Link>
+              </div>
               <div className="open" onClick={toggleFooter}>
                 <span>&#11044;</span>
                 <span>&#11044;</span>
@@ -131,17 +142,13 @@ const StyledNavbar = styled.nav`
 
 const StyledBottomNav = styled.header`
   --safePaddingBottom: env(safe-area-inset-bottom);
-  padding-bottom: calc(16px + var(--safePaddingBottom));
-  padding-top: calc(16px + var(--safePaddingBottom));
-
   display: none;
-  padding: 10px 0;
   grid-template-columns: auto;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 199999;
   background-color: ${footer};
   transition: all 0.3s;
   color: ${footerText};
@@ -158,6 +165,11 @@ const StyledBottomNav = styled.header`
     align-items: center;
     padding: 16px 30px;
 
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
     .open {
       margin-left: auto;
       letter-spacing: 5px;
@@ -171,6 +183,7 @@ const StyledBottomNav = styled.header`
   }
 
   .nav {
+    animation: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: grid;
   }
 

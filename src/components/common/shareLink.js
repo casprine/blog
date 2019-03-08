@@ -7,7 +7,7 @@ const ShareLink = props => {
       <StyledShareLink
         href={`https://twitter.com/intent/tweet?text=${
           props.title
-        }&url=${env.url + "p/" + props.id}`}
+        }&url=${env.url + props.id}`}
       >
         <div className="share-button">
           <div className="wrapper  flex">

@@ -31,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .articles{
-    margin:30px 0;
+    margin:30px 0 50px 0 !important;
   }
 
  
@@ -139,20 +139,21 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
-
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-
-
   background: #0f111a;
 
 
+  @media (max-width: 750px) {
+    *{
+      font-size:13px !important;
+      }
+  }
 }
 
 /* Code blocks */

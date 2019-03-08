@@ -5,6 +5,16 @@ import { Footer, Navbar } from "../src/components/navigation/index";
 import matter from "gray-matter";
 
 class Article extends Component {
+  static async getInitialProps({ query }) {
+    const post = await import(`../posts/${query.id}.md`);
+    const document = matter(post.default);
+
+    return {
+      ...document,
+      query
+    };
+  }
+
   render() {
     return (
       <Fragment>
@@ -17,15 +27,5 @@ class Article extends Component {
     );
   }
 }
-
-Article.getInitialProps = async ({ query }) => {
-  const post = await import(`../posts/${query.id}.md`);
-  const document = matter(post.default);
-
-  return {
-    ...document,
-    query
-  };
-};
 
 export default Article;
