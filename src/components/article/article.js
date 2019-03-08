@@ -6,7 +6,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { grey, white, black } from "../common/";
 
 const Article = ({ data: props, slug: id }) => {
-  console.log(props);
   return (
     <Fragment>
       <ContextConsumer>

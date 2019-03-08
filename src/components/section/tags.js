@@ -10,14 +10,6 @@ const Tags = () => {
           <Tag {...tag} key={i} />
         ))}
       </div>
-
-      <style jsx>
-        {`
-          .tags {
-            padding: 30px 0;
-          }
-        `}
-      </style>
     </Fragment>
   );
 };

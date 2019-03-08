@@ -50,7 +50,7 @@ const StyledArticleView = styled.section`
   margin: 30px auto;
   padding-bottom: 50px;
   color: ${white};
-  width: 80%;
+  width: 870px;
 
   @media (max-width: 750px) {
     width: 100%;

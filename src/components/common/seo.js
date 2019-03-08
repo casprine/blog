@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
 
+const url = "http:";
+
 export const SEO = props => {
   console.log(props);
 

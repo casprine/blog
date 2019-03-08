@@ -13,19 +13,20 @@ const Tag = ({ url, name }) => {
 };
 
 const StyledTag = styled.div`
-div {
   display: flex;
   cursor: pointer;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 
-}
-img {
-  width: 20px;
-  height: 20px;
-}
-span {
-  margin-left: 10px;
-  font-size: 18px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    font-family: "Book";
+    margin-left: 10px;
+    font-size: 18px;
+  }
 `;
 
 export default Tag;
