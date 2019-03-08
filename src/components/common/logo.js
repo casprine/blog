@@ -7,11 +7,10 @@ const Logo = () => (
   <Fragment>
     <ContextConsumer>
       {({ theme }) => {
-        console.log(theme);
         return (
-          <>
+          <Fragment>
             {theme ? (
-              <Link to="/">
+              <Link href="/">
                 <StyledPicture>
                   <source
                     srcSet="../../../static/images/circle.png"
@@ -30,7 +29,7 @@ const Logo = () => (
                 </StyledPicture>
               </Link>
             ) : (
-              <Link to="/">
+              <Link href="/">
                 <StyledPicture>
                   <source
                     srcSet="../../../static/images/circle-dark.png"
@@ -49,7 +48,7 @@ const Logo = () => (
                 </StyledPicture>
               </Link>
             )}
-          </>
+          </Fragment>
         );
       }}
     </ContextConsumer>
@@ -57,8 +56,9 @@ const Logo = () => (
 );
 
 const StyledPicture = styled.picture`
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
 
   source,
   img {

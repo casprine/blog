@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Layout } from "../src/components/common/index";
+import { Layout, SEO } from "../src/components/common/index";
 import { SectionHeader } from "../src/components/section/index";
 import { ArticleCard } from "../src/components/article/index";
 import { Navbar, Footer } from "../src/components/navigation/index";
@@ -9,6 +9,10 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
+        <SEO
+          title="Casprine's writings"
+          description="Experiments on CSS, React, Javascript and Design"
+        />
         <Layout>
           <Navbar />
           <SectionHeader />

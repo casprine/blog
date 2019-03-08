@@ -5,6 +5,8 @@ import TagImage from "./tagImage";
 import ShareIt from "./shareLink";
 import ThemeChanger from "./themeChanger";
 import { black, grey, white } from "./theme";
+import SEO from "./seo";
+
 export {
   Layout,
   colors,
@@ -14,5 +16,6 @@ export {
   ThemeChanger,
   white,
   grey,
-  black
+  black,
+  SEO
 };

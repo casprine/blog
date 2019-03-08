@@ -1,11 +1,9 @@
 import React, { Fragment, useEffect } from "react";
-import Head from "next/head";
 import { ShareIt } from "../common/index";
-import { tagSelector, slugify } from "../../utils/helpers";
-import { env } from "../../utils/helpers";
+import { tagSelector } from "../../utils/helpers";
 import styled from "styled-components";
-import { colors } from "../common/index";
-import { grey, white } from "../common/theme";
+import { colors, SEO } from "../common/index";
+import { white } from "../common/theme";
 import ReactMarkdown from "react-markdown";
 import Prism from "prismjs";
 
@@ -17,6 +15,7 @@ const ArticleView = ({
   useEffect(() => Prism.highlightAll());
   return (
     <Fragment>
+      <SEO title={title} description={spoiler} issue={id} />
       <StyledArticleView>
         <h1 className="book title"> {title}</h1>
         <div className="meta flex" style={{ marginTop: "20px" }}>
