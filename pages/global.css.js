@@ -30,7 +30,6 @@ const GlobalStyles = createGlobalStyle`
     font-feature-settings:"calt", "kern", "liga";
   }
 
-
   .articles{
     margin:30px 0;
   }

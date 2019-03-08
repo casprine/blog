@@ -6,7 +6,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 const layoutStyles = {
   wrapper: {
-    width: "85vw",
+    width: "80vw",
     minHeight: "100vh",
     marginRight: "auto",
     marginLeft: "auto",
@@ -40,6 +40,11 @@ const Layout = ({ children }) => {
 
 const StyledLayout = styled.div`
   background: ${body};
+  outline: 1px solid red;
+
+  * {
+    /* outline: 1px solid red; */
+  }
 `;
 
 export default Layout;

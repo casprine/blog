@@ -38,6 +38,8 @@ const Footer = () => (
 );
 
 const StyledFooter = styled.nav`
+  margin-top: auto;
+
   @media (max-width: 750px) {
     outline: 1px solid red;
     display: none !important;
