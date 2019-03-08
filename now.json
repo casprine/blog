@@ -9,7 +9,7 @@
     { "src": "static/fonts/", "use": "@now/static" }
   ],
   "routes": [
-    { "src": "/p/(?<id>.+)", "dest": "/article?id=$id" },
+    { "src": "/(?<id>.+)", "dest": "/article?id=$id" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
