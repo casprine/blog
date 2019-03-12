@@ -16,8 +16,8 @@ const ThemeChanger = () => {
       <ContextConsumer>
         {({ theme, toggleTheme }) => (
           <StyledToggler onClick={toggleTheme}>
-            <span className={theme ? "icon" : "light"} theme={theme}>
-              {theme ? (
+            <span className={theme === "dark" ? "icon" : "light"} theme={theme}>
+              {theme === "dark" ? (
                 <i>
                   <svg
                     data-v-adffe394=""

@@ -4,14 +4,15 @@ const ContextContext = React.createContext();
 
 class ContextProvider extends Component {
   state = {
-    dark: !day,
+    dark: day(),
     footer: false
   };
 
   toggleTheme = () => {
-    this.state.dark
-      ? this.setState({ dark: false })
-      : this.setState({ dark: true });
+    console.log(this.state.dark, "from toggler");
+    this.state.dark === "dark"
+      ? this.setState({ dark: "light" })
+      : this.setState({ dark: "dark" });
   };
 
   toggleFooter = () => {
@@ -19,6 +20,10 @@ class ContextProvider extends Component {
       ? this.setState({ footer: false })
       : this.setState({ footer: true });
   };
+
+  componentDidMount() {
+    console.log(this.state.dark);
+  }
 
   render() {
     const { dark, footer } = this.state;

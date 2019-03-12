@@ -7,9 +7,10 @@ const Logo = () => (
   <Fragment>
     <ContextConsumer>
       {({ theme }) => {
+        console.log(theme, "theme from logo");
         return (
           <Fragment>
-            {theme ? (
+            {theme === "dark" ? (
               <Link href="/">
                 <StyledPicture>
                   <source
